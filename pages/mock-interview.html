@@ -1,0 +1,685 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mock Interview | AI Interview Prep</title>
+
+    <link rel="stylesheet" href="../style.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- ============================== -->
+    <!-- NAVBAR -->
+    <!-- ============================== -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            AI Interview Prep
+        </div>
+
+
+        <ul class="nav-links">
+
+            <li>
+                <a href="../index.html">
+                    Home
+                </a>
+            </li>
+
+            <li>
+                <a href="practice.html">
+                    Practice
+                </a>
+            </li>
+
+            <li>
+                <a href="mock-interview.html">
+                    Mock Interview
+                </a>
+            </li>
+
+            <li>
+                <a href="#">
+                    About
+                </a>
+            </li>
+
+        </ul>
+
+
+        <button class="login-btn">
+            Login
+        </button>
+
+    </nav>
+
+
+
+    <!-- ============================== -->
+    <!-- MOCK INTERVIEW PAGE -->
+    <!-- ============================== -->
+
+    <main class="mock-page">
+
+
+        <!-- ============================== -->
+        <!-- HEADER -->
+        <!-- ============================== -->
+
+        <div class="mock-header">
+
+            <h1>
+                AI Mock Interview
+            </h1>
+
+            <p>
+                Practice answering real interview questions
+                and improve your communication skills.
+            </p>
+
+        </div>
+
+
+
+        <!-- ============================== -->
+        <!-- ROLE SELECTION -->
+        <!-- ============================== -->
+
+        <div class="role-selection">
+
+            <label for="role">
+                Select Interview Role
+            </label>
+
+
+            <select id="role">
+
+                <option value="Frontend Developer">
+                    Frontend Developer
+                </option>
+
+                <option value="JavaScript Developer">
+                    JavaScript Developer
+                </option>
+
+                <option value="Software Developer">
+                    Software Developer
+                </option>
+
+                <option value="HR Interview">
+                    HR Interview
+                </option>
+
+            </select>
+
+        </div>
+
+
+
+        <!-- ============================== -->
+        <!-- INTERVIEW CONTAINER -->
+        <!-- ============================== -->
+
+        <div class="mock-container">
+
+
+            <!-- QUESTION NUMBER -->
+
+            <div class="mock-top">
+
+                <span id="mock-question-number">
+                    Question 1 of 5
+                </span>
+
+            </div>
+
+
+
+            <!-- QUESTION -->
+
+            <h2 id="mock-question">
+                Tell me about yourself.
+            </h2>
+
+
+
+            <!-- ANSWER -->
+
+            <textarea
+                id="answer"
+                placeholder="Type your answer here..."
+            ></textarea>
+
+
+
+            <!-- SUBMIT -->
+
+            <button id="submit-answer">
+                Submit Answer
+            </button>
+
+
+
+            <!-- ============================== -->
+            <!-- AI FEEDBACK -->
+            <!-- ============================== -->
+
+            <div id="feedback-box">
+
+                <h3>
+                    AI Evaluation
+                </h3>
+
+
+                <!-- MAIN SCORE -->
+
+                <div class="ai-score">
+
+                    <strong id="ai-score">
+                        0
+                    </strong>
+
+                    /100
+
+                </div>
+
+
+                <!-- AI FEEDBACK -->
+
+                <p id="feedback">
+                    Your AI feedback will appear here.
+                </p>
+
+
+
+                <!-- ============================== -->
+                <!-- CATEGORY SCORES -->
+                <!-- ============================== -->
+
+                <div class="evaluation-scores">
+
+
+                    <div>
+
+                        <strong id="relevance-score">
+                            0
+                        </strong>
+
+                        <span>
+                            Relevance
+                        </span>
+
+                    </div>
+
+
+                    <div>
+
+                        <strong id="technical-score">
+                            0
+                        </strong>
+
+                        <span>
+                            Technical Accuracy
+                        </span>
+
+                    </div>
+
+
+                    <div>
+
+                        <strong id="communication-score">
+                            0
+                        </strong>
+
+                        <span>
+                            Communication
+                        </span>
+
+                    </div>
+
+
+                    <div>
+
+                        <strong id="structure-score">
+                            0
+                        </strong>
+
+                        <span>
+                            Structure
+                        </span>
+
+                    </div>
+
+
+                    <div>
+
+                        <strong id="completeness-score">
+                            0
+                        </strong>
+
+                        <span>
+                            Completeness
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- ============================== -->
+                <!-- STRENGTHS -->
+                <!-- ============================== -->
+
+                <div class="ai-feedback-section">
+
+                    <h4>
+                        Strengths
+                    </h4>
+
+
+                    <ul id="strengths-list"></ul>
+
+                </div>
+
+
+
+                <!-- ============================== -->
+                <!-- WEAKNESSES -->
+                <!-- ============================== -->
+
+                <div class="ai-feedback-section">
+
+                    <h4>
+                        Areas to Improve
+                    </h4>
+
+
+                    <ul id="weaknesses-list"></ul>
+
+                </div>
+
+
+
+                <!-- ============================== -->
+                <!-- SUGGESTIONS -->
+                <!-- ============================== -->
+
+                <div class="ai-feedback-section">
+
+                    <h4>
+                        Suggestions
+                    </h4>
+
+
+                    <ul id="suggestions-list"></ul>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ============================== -->
+            <!-- FINAL RESULT -->
+            <!-- ============================== -->
+
+            <div id="mock-result">
+
+
+                <!-- RESULT HEADER -->
+
+                <div class="result-header">
+
+                    <div class="result-icon">
+                        ✓
+                    </div>
+
+                    <h2>
+                        Interview Completed!
+                    </h2>
+
+                    <p>
+                        Great job! Here is your AI-powered
+                        interview performance report.
+                    </p>
+
+                    <span id="result-role">
+                        Frontend Developer
+                    </span>
+
+                </div>
+
+
+
+                <!-- ============================== -->
+                <!-- OVERALL SCORE -->
+                <!-- ============================== -->
+
+                <div class="overall-result">
+
+                    <p>
+                        Overall Score
+                    </p>
+
+
+                    <div class="final-score">
+
+                        <span id="average-score">
+                            0
+                        </span>
+
+                        <small>
+                            /100
+                        </small>
+
+                    </div>
+
+
+                    <p id="result-summary">
+                        Your interview has been completed.
+                    </p>
+
+                </div>
+
+
+
+                <!-- ============================== -->
+                <!-- RESULT STATS -->
+                <!-- ============================== -->
+
+                <div class="result-stats">
+
+
+                    <div class="result-stat-card">
+
+                        <strong id="total-questions">
+                            5
+                        </strong>
+
+                        <span>
+                            Total Questions
+                        </span>
+
+                    </div>
+
+
+                    <div class="result-stat-card">
+
+                        <strong id="answered-questions">
+                            5
+                        </strong>
+
+                        <span>
+                            Questions Answered
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- ============================== -->
+                <!-- PERFORMANCE ANALYSIS -->
+                <!-- ============================== -->
+
+                <div class="performance-analysis">
+
+
+                    <div class="section-heading">
+
+                        <h3>
+                            Performance Analysis
+                        </h3>
+
+                        <p>
+                            AI evaluation across different
+                            interview skills
+                        </p>
+
+                    </div>
+
+
+
+                    <!-- RELEVANCE -->
+
+                    <div class="score-bar">
+
+                        <div class="score-label">
+
+                            <span>
+                                Relevance
+                            </span>
+
+                            <strong id="final-relevance">
+                                0
+                            </strong>
+
+                        </div>
+
+
+                        <div class="bar-background">
+
+                            <div
+                                id="relevance-bar"
+                                class="bar-fill"
+                            ></div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- TECHNICAL ACCURACY -->
+
+                    <div class="score-bar">
+
+                        <div class="score-label">
+
+                            <span>
+                                Technical Accuracy
+                            </span>
+
+                            <strong id="final-technical">
+                                0
+                            </strong>
+
+                        </div>
+
+
+                        <div class="bar-background">
+
+                            <div
+                                id="technical-bar"
+                                class="bar-fill"
+                            ></div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- COMMUNICATION -->
+
+                    <div class="score-bar">
+
+                        <div class="score-label">
+
+                            <span>
+                                Communication
+                            </span>
+
+                            <strong id="final-communication">
+                                0
+                            </strong>
+
+                        </div>
+
+
+                        <div class="bar-background">
+
+                            <div
+                                id="communication-bar"
+                                class="bar-fill"
+                            ></div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- STRUCTURE -->
+
+                    <div class="score-bar">
+
+                        <div class="score-label">
+
+                            <span>
+                                Structure
+                            </span>
+
+                            <strong id="final-structure">
+                                0
+                            </strong>
+
+                        </div>
+
+
+                        <div class="bar-background">
+
+                            <div
+                                id="structure-bar"
+                                class="bar-fill"
+                            ></div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- COMPLETENESS -->
+
+                    <div class="score-bar">
+
+                        <div class="score-label">
+
+                            <span>
+                                Completeness
+                            </span>
+
+                            <strong id="final-completeness">
+                                0
+                            </strong>
+
+                        </div>
+
+
+                        <div class="bar-background">
+
+                            <div
+                                id="completeness-bar"
+                                class="bar-fill"
+                            ></div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- ============================== -->
+                <!-- QUESTION PERFORMANCE -->
+                <!-- ============================== -->
+
+                <div class="question-performance">
+
+
+                    <div class="section-heading">
+
+                        <h3>
+                            Question Performance
+                        </h3>
+
+                        <p>
+                            See how you performed on each question
+                        </p>
+
+                    </div>
+
+
+                    <div id="question-performance-list">
+
+                        <!-- JavaScript adds question scores here -->
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- ============================== -->
+                <!-- RESULT BUTTONS -->
+                <!-- ============================== -->
+
+                <div class="mock-result-buttons">
+
+
+                    <button id="restart-interview">
+                        Practice Again
+                    </button>
+
+
+                    <a href="../index.html">
+                        Back to Home
+                    </a>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ============================== -->
+            <!-- NEXT QUESTION -->
+            <!-- ============================== -->
+
+            <button id="next-question">
+                Next Question
+            </button>
+
+
+        </div>
+
+    </main>
+
+
+
+    <!-- ============================== -->
+    <!-- JAVASCRIPT -->
+    <!-- ============================== -->
+
+    <script src="../mock-interview.js"></script>
+
+
+</body>
+
+</html>
+```

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Practice Questions | AI Interview Prep</title>
+
+    <link rel="stylesheet" href="../style.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- Navbar -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            AI Interview Prep
+        </div>
+
+        <ul class="nav-links">
+
+            <li>
+                <a href="../index.html">Home</a>
+            </li>
+
+            <li>
+                <a href="practice.html">Practice</a>
+            </li>
+
+            <li>
+                <a href="mock-interview.html">
+                    Mock Interview
+                </a>
+            </li>
+
+            <li>
+                <a href="#">About</a>
+            </li>
+
+        </ul>
+
+        <button class="login-btn">
+            Login
+        </button>
+
+    </nav>
+
+
+
+    <!-- Practice Section -->
+
+    <main class="practice-page">
+
+        <div class="practice-header">
+
+            <h1>Practice Interview Questions</h1>
+
+            <p>
+                Choose a category and test your knowledge.
+            </p>
+
+        </div>
+
+
+        <!-- Category Selection -->
+
+        <div class="practice-categories">
+
+            <button class="practice-category active">
+                Frontend
+            </button>
+
+            <button class="practice-category">
+                JavaScript
+            </button>
+
+            <button class="practice-category">
+                Programming
+            </button>
+
+            <button class="practice-category">
+                Database
+            </button>
+
+            <button class="practice-category">
+                HR
+            </button>
+
+            <button class="practice-category">
+                Aptitude
+            </button>
+
+        </div>
+
+
+        <!-- Question Box -->
+
+        <div class="question-container">
+
+            <div class="question-top">
+
+                <span id="question-number">
+                    Question 1 of 5
+                </span>
+
+                <span id="score">
+                    Score: 0
+                </span>
+
+            </div>
+
+
+            <h2 id="question">
+                What does HTML stand for?
+            </h2>
+
+
+            <!-- Options -->
+
+            <div class="options">
+
+                <button class="option">
+                    Hyper Text Markup Language
+                </button>
+
+                <button class="option">
+                    High Text Machine Language
+                </button>
+
+                <button class="option">
+                    Hyperlink Text Management Language
+                </button>
+
+                <button class="option">
+                    Home Tool Markup Language
+                </button>
+
+            </div>
+
+
+            <button id="next-btn">
+                Next Question
+            </button>
+
+            <div id="result-box" class="result-box">
+
+                <h2>Interview Complete!</h2>
+
+                <div class="result-score" id="final-score">
+                    0%
+                </div>
+
+                <p id="result-message">
+                    Great job!
+                </p>
+
+                <div class="result-details">
+
+                    <p>
+                        Correct Answers:
+                        <span id="correct-answers">0</span>
+                    </p>
+
+                    <p>
+                        Wrong Answers:
+                        <span id="wrong-answers">0</span>
+                    </p>
+
+                </div>
+
+                <div class="result-buttons">
+
+                    <button id="restart-btn">
+                        Practice Again
+                    </button>
+
+                    <a href="../index.html">
+                        Back to Home
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <script src="../script.js"></script>
+
+</body>
+
+</html>
