@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>About | AI Interview Prep</title>
+
+    <link rel="stylesheet" href="../style.css">
+
+    <style>
+
+        <style>
+
+    .about-page {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 70px 20px;
+    }
+
+    .about-header {
+        text-align: center;
+        max-width: 800px;
+        margin: 0 auto 55px;
+    }
+
+    .about-header h1 {
+        font-size: 42px;
+        margin-bottom: 15px;
+    }
+
+    .about-header p {
+        color: #666;
+        font-size: 18px;
+        line-height: 1.7;
+        margin: 0;
+    }
+
+    .about-section {
+        background: white;
+        padding: 35px;
+        margin-bottom: 30px;
+        border-radius: 14px;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
+    }
+
+    .about-section h2 {
+        font-size: 25px;
+        margin-bottom: 15px;
+    }
+
+    .about-section > p {
+        color: #555;
+        line-height: 1.8;
+        margin: 0;
+    }
+
+    .features-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 22px;
+        margin-top: 25px;
+    }
+
+    .feature-card {
+        padding: 25px;
+        background: #f8fafc;
+        border: 1px solid #e5e7eb;
+        border-radius: 12px;
+        transition: transform 0.2s ease,
+                    box-shadow 0.2s ease;
+    }
+
+    .feature-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    }
+
+    .feature-card h3 {
+        margin-bottom: 10px;
+        font-size: 18px;
+    }
+
+    .feature-card p {
+        color: #666;
+        line-height: 1.6;
+        margin: 0;
+        font-size: 15px;
+    }
+
+    .technology-list {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+        margin-top: 22px;
+    }
+
+    .technology {
+        padding: 10px 18px;
+        background: #eff6ff;
+        color: #2563eb;
+        border: 1px solid #dbeafe;
+        border-radius: 20px;
+        font-weight: 600;
+    }
+
+    .about-footer {
+        text-align: center;
+        margin-top: 45px;
+        color: #777;
+    }
+
+    @media (max-width: 800px) {
+
+        .features-grid {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .about-header h1 {
+            font-size: 34px;
+        }
+
+    }
+
+    @media (max-width: 600px) {
+
+        .about-page {
+            padding: 45px 15px;
+        }
+
+        .features-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .about-header h1 {
+            font-size: 30px;
+        }
+
+        .about-header p {
+            font-size: 16px;
+        }
+
+        .about-section {
+            padding: 25px;
+        }
+
+    }
+
+</style>
+</head>
+
+
+<body>
+
+
+    <!-- Navbar -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            AI Interview Prep
+        </div>
+
+
+        <ul class="nav-links">
+
+            <li>
+                <a href="../index.html">
+                    Home
+                </a>
+            </li>
+
+            <li>
+                <a href="practice.html">
+                    Practice
+                </a>
+            </li>
+
+            <li>
+                <a href="mock-interview.html">
+                    Mock Interview
+                </a>
+            </li>
+
+            <li>
+                <a href="dashboard.html">
+                    Dashboard
+                </a>
+            </li>
+
+            <li>
+                <a href="about.html">
+                    About
+                </a>
+            </li>
+
+        </ul>
+
+
+        <button class="login-btn" id="login-btn">
+            Login
+        </button>
+
+    </nav>
+
+
+    <!-- About Page -->
+
+    <main class="about-page">
+
+
+        <!-- Header -->
+
+        <section class="about-header">
+
+            <h1>
+                About AI Interview Prep
+            </h1>
+
+            <p>
+                An AI-powered interview preparation platform
+                designed to help students improve their
+                technical knowledge, communication skills,
+                and interview confidence.
+            </p>
+
+        </section>
+
+
+        <!-- About Project -->
+
+        <section class="about-section">
+
+            <h2>
+                What is AI Interview Prep?
+            </h2>
+
+            <p>
+                AI Interview Prep is a web-based interview
+                preparation portal developed to help students
+                prepare for technical and HR interviews.
+                The platform provides practice questions,
+                mock interviews, performance tracking,
+                and personalized feedback.
+            </p>
+
+        </section>
+
+
+        <!-- Features -->
+
+        <section class="about-section">
+
+            <h2>
+                Key Features
+            </h2>
+
+
+            <div class="features-grid">
+
+
+                <div class="feature-card">
+
+                    <h3>
+                        📝 Practice Questions
+                    </h3>
+
+                    <p>
+                        Practice questions from Frontend,
+                        JavaScript, Programming, Database,
+                        HR, and Aptitude categories.
+                    </p>
+
+                </div>
+
+
+                <div class="feature-card">
+
+                    <h3>
+                        🎤 Mock Interview
+                    </h3>
+
+                    <p>
+                        Simulate an interview environment
+                        and receive feedback based on your
+                        answers.
+                    </p>
+
+                </div>
+
+
+                <div class="feature-card">
+
+                    <h3>
+                        📊 Performance Tracking
+                    </h3>
+
+                    <p>
+                        Track practice sessions, scores,
+                        interview performance, and progress
+                        through the dashboard.
+                    </p>
+
+                </div>
+
+
+                <div class="feature-card">
+
+                    <h3>
+                        🔐 Student Login
+                    </h3>
+
+                    <p>
+                        Students can log in to access their
+                        personalized interview preparation
+                        dashboard.
+                    </p>
+
+                </div>
+
+
+                <div class="feature-card">
+
+                    <h3>
+                        💡 Preparation Tips
+                    </h3>
+
+                    <p>
+                        Get useful interview preparation
+                        tips to improve confidence and
+                        communication.
+                    </p>
+
+                </div>
+
+
+                <div class="feature-card">
+
+                    <h3>
+                        🤖 AI Evaluation
+                    </h3>
+
+                    <p>
+                        The system can evaluate interview
+                        answers and provide feedback using
+                        AI technology.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- Technologies -->
+
+        <section class="about-section">
+
+            <h2>
+                Technologies Used
+            </h2>
+
+            <p>
+                The project is developed using modern
+                web technologies.
+            </p>
+
+
+            <div class="technology-list">
+
+                <span class="technology">
+                    HTML5
+                </span>
+
+                <span class="technology">
+                    CSS3
+                </span>
+
+                <span class="technology">
+                    JavaScript
+                </span>
+
+                <span class="technology">
+                    LocalStorage
+                </span>
+
+                <span class="technology">
+                    AI API
+                </span>
+
+            </div>
+
+        </section>
+
+
+        <!-- Objective -->
+
+        <section class="about-section">
+
+            <h2>
+                Project Objective
+            </h2>
+
+            <p>
+                The main objective of this project is to
+                provide students with an accessible platform
+                where they can practice interview questions,
+                simulate interviews, identify their weak
+                areas, and improve their overall interview
+                performance.
+            </p>
+
+        </section>
+
+
+        <div class="about-footer">
+
+            <p>
+                AI Interview Prep — Academic Project
+            </p>
+
+        </div>
+
+
+    </main>
+
+
+    <!-- Login / Logout -->
+
+    <script>
+
+        const loginBtn =
+            document.getElementById("login-btn");
+
+        const loggedIn =
+            localStorage.getItem("loggedIn");
+
+
+        if (loggedIn === "true") {
+
+            loginBtn.textContent = "Logout";
+
+
+            loginBtn.addEventListener("click", function () {
+
+                localStorage.removeItem("loggedIn");
+
+                localStorage.removeItem("userEmail");
+
+                window.location.href =
+                    "../index.html";
+
+            });
+
+        }
+
+        else {
+
+            loginBtn.textContent = "Login";
+
+
+            loginBtn.addEventListener("click", function () {
+
+                window.location.href =
+                    "login.html";
+
+            });
+
+        }
+
+    </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,117 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login - AI Interview Prep</title>
+
+    <link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+
+        <div class="logo">
+            AI Interview Prep
+        </div>
+
+        <div class="nav-links">
+
+            <a href="../index.html">Home</a>
+
+            <a href="practice.html">Practice</a>
+
+            <a href="mock-interview.html">Mock Interview</a>
+
+            <a href="dashboard.html">Dashboard</a>
+
+            <a href="about.html">About</a>
+
+        </div>
+
+    </nav>
+
+
+    <!-- Login Section -->
+    <section class="login-page">
+
+        <div class="login-container">
+
+            <h1>Welcome Back</h1>
+
+            <p>Login to continue your interview preparation.</p>
+
+
+            <form id="login-form">
+
+                <div class="form-group">
+
+                    <label for="email">
+                        Email
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="Enter your email"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="password">
+                        Password
+                    </label>
+
+                    <div class="password-wrapper">
+
+                        <input
+                            type="password"
+                            id="password"
+                            placeholder="Enter your password"
+                            required
+                        >
+
+                        <button type="button" id="toggle-password">
+                            👁
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <button type="submit" class="login-submit">
+                    Login
+                </button>
+
+
+                <p id="login-message"></p>
+
+            </form>
+
+
+            <p class="signup-text">
+                Don't have an account?
+                <a href="#">Create Account</a>
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- Login JavaScript -->
+    <script src="../login.js"></script>
+
+</body>
+
+</html>

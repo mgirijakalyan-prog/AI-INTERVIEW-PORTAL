@@ -425,9 +425,9 @@ const categoryButtons =
     document.querySelectorAll(".practice-category");
 
 
-categoryButtons.forEach(function(button) {
+categoryButtons.forEach(function (button) {
 
-    button.addEventListener("click", function() {
+    button.addEventListener("click", function () {
 
         currentCategory =
             button.textContent.trim();
@@ -442,7 +442,7 @@ categoryButtons.forEach(function(button) {
         selectedAnswer = false;
 
 
-        categoryButtons.forEach(function(btn) {
+        categoryButtons.forEach(function (btn) {
 
             btn.classList.remove("active");
 
@@ -500,7 +500,7 @@ function loadQuestion() {
     optionsContainer.innerHTML = "";
 
 
-    current.options.forEach(function(option) {
+    current.options.forEach(function (option) {
 
         const button =
             document.createElement("button");
@@ -513,7 +513,7 @@ function loadQuestion() {
             option;
 
 
-        button.addEventListener("click", function() {
+        button.addEventListener("click", function () {
 
             checkAnswer(button, option);
 
@@ -569,7 +569,7 @@ function checkAnswer(button, selectedOption) {
             document.querySelectorAll(".option");
 
 
-        allOptions.forEach(function(option) {
+        allOptions.forEach(function (option) {
 
             if (option.textContent === correctAnswer) {
 
@@ -596,7 +596,7 @@ function checkAnswer(button, selectedOption) {
 // NEXT QUESTION
 // ==============================
 
-nextButton.addEventListener("click", function() {
+nextButton.addEventListener("click", function () {
 
     if (!selectedAnswer) {
 
@@ -634,6 +634,36 @@ function showResult() {
         Math.round(
             (score / questions.length) * 100
         );
+
+
+    // ==============================
+    // SAVE PRACTICE COMPLETION
+    // ==============================
+
+    let practiceCount =
+        Number(localStorage.getItem("practiceCount")) || 0;
+
+    practiceCount++;
+
+    localStorage.setItem(
+        "practiceCount",
+        practiceCount
+    );
+
+
+    // ==============================
+    // SAVE LATEST PRACTICE PERFORMANCE
+    // ==============================
+
+    localStorage.setItem(
+        "latestScore",
+        percentage
+    );
+
+    localStorage.setItem(
+        "lastActivity",
+        "Practice - " + currentCategory
+    );
 
 
     const wrong =
@@ -704,7 +734,7 @@ function showResult() {
 // RESTART QUIZ
 // ==============================
 
-restartButton.addEventListener("click", function() {
+restartButton.addEventListener("click", function () {
 
     currentQuestion = 0;
 

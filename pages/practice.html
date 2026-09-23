@@ -17,6 +17,23 @@
 <body>
 
 
+    <!-- Login Protection -->
+
+    <script>
+
+        const loggedIn = localStorage.getItem("loggedIn");
+
+        if (loggedIn !== "true") {
+
+            alert("Please login first.");
+
+            window.location.href = "login.html";
+
+        }
+
+    </script>
+
+
     <!-- Navbar -->
 
     <nav class="navbar">
@@ -35,19 +52,13 @@
                 <a href="practice.html">Practice</a>
             </li>
 
-            <li>
-                <a href="mock-interview.html">
-                    Mock Interview
-                </a>
-            </li>
-
-            <li>
-                <a href="#">About</a>
-            </li>
-
+            <li><a href="mock-interview.html">Mock Interview</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="about.html">About</a></li>
         </ul>
 
-        <button class="login-btn">
+
+        <button class="login-btn" id="login-btn">
             Login
         </button>
 
@@ -150,6 +161,9 @@
                 Next Question
             </button>
 
+
+            <!-- Result Box -->
+
             <div id="result-box" class="result-box">
 
                 <h2>Interview Complete!</h2>
@@ -161,6 +175,7 @@
                 <p id="result-message">
                     Great job!
                 </p>
+
 
                 <div class="result-details">
 
@@ -175,6 +190,7 @@
                     </p>
 
                 </div>
+
 
                 <div class="result-buttons">
 
@@ -195,7 +211,50 @@
     </main>
 
 
+
+    <!-- Existing JavaScript -->
+
     <script src="../script.js"></script>
+
+
+
+    <!-- Login / Logout System -->
+
+    <script>
+
+        const loginBtn = document.getElementById("login-btn");
+
+        const userLoggedIn = localStorage.getItem("loggedIn");
+
+
+        if (userLoggedIn === "true") {
+
+            loginBtn.textContent = "Logout";
+
+
+            loginBtn.addEventListener("click", function () {
+
+                localStorage.removeItem("loggedIn");
+
+                localStorage.removeItem("userEmail");
+
+                window.location.href = "../index.html";
+
+            });
+
+
+        } else {
+
+            loginBtn.addEventListener("click", function () {
+
+                window.location.href = "login.html";
+
+            });
+
+        }
+
+    </script>
+
 
 </body>
 

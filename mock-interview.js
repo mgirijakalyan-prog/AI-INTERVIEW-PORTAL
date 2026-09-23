@@ -304,7 +304,7 @@ submitAnswer.addEventListener("click", async function() {
     try {
 
         const response = await fetch(
-            "http://localhost:5000/api/evaluate",
+            "https://ai-interview-backend-2rht.onrender.com/api/evaluate",
             {
 
                 method: "POST",
@@ -425,6 +425,57 @@ function showMockResult() {
             questionScores.length
         );
 
+
+    /* ================================
+       SAVE DASHBOARD PROGRESS
+       ================================ */
+
+    let interviewCount =
+        Number(
+            localStorage.getItem("interviewCount")
+        ) || 0;
+
+    let bestScore =
+        Number(
+            localStorage.getItem("bestScore")
+        ) || 0;
+
+
+    interviewCount++;
+
+
+    if (average > bestScore) {
+
+        bestScore = average;
+
+    }
+
+
+    localStorage.setItem(
+        "interviewCount",
+        interviewCount
+    );
+
+    localStorage.setItem(
+        "bestScore",
+        bestScore
+    );
+
+    localStorage.setItem(
+        "lastScore",
+        average
+    );
+    
+    localStorage.setItem("latestScore", average);
+
+localStorage.setItem(
+    "lastActivity",
+    "Mock Interview - " + mockRole
+);
+
+    /* ================================
+       CALCULATE EVALUATION AVERAGES
+       ================================ */
 
     let totalRelevance = 0;
     let totalTechnical = 0;

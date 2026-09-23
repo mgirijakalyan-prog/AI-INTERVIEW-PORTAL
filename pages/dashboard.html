@@ -1,0 +1,507 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard - AI Interview Prep</title>
+
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+
+<body>
+
+    <!-- Login Protection -->
+    <script>
+        const loggedIn = localStorage.getItem("loggedIn");
+
+        if (loggedIn !== "true") {
+            alert("Please login first.");
+            window.location.href = "login.html";
+        }
+    </script>
+
+
+    <!-- Navbar -->
+    <nav class="navbar">
+
+        <div class="logo">
+            AI Interview Prep
+        </div>
+
+        <div class="nav-links">
+
+            <a href="../index.html">Home</a>
+
+            <a href="dashboard.html">Dashboard</a>
+
+            <a href="practice.html">Practice</a>
+
+            <a href="mock-interview.html">Mock Interview</a>
+
+            <a href="about.html">About</a>
+
+            <button class="login-btn" id="login-btn">
+                Logout
+            </button>
+
+        </div>
+
+    </nav>
+
+
+    <!-- Dashboard -->
+    <main class="dashboard-page">
+
+
+        <!-- Dashboard Header -->
+
+        <div class="dashboard-header">
+
+            <span class="dashboard-badge">
+                Student Dashboard
+            </span>
+
+            <h1>
+                Welcome Back 👋
+            </h1>
+
+            <p>
+                Track your interview preparation progress,
+                review your performance, and keep improving
+                your interview skills.
+            </p>
+
+        </div>
+
+
+        <!-- User Profile -->
+
+        <section class="dashboard-profile">
+
+            <div class="profile-icon">
+                👤
+            </div>
+
+            <div>
+
+                <h2>Student</h2>
+
+                <p id="user-email">
+                    Loading...
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- Statistics -->
+
+        <section class="dashboard-stats">
+
+
+            <!-- Practice -->
+
+            <div class="dashboard-card">
+
+                <div class="dashboard-card-icon">
+                    📝
+                </div>
+
+                <h3>
+                    Practice Completed
+                </h3>
+
+                <p
+                    class="stat-number"
+                    id="practice-count">
+                    0
+                </p>
+
+            </div>
+
+
+            <!-- Mock Interviews -->
+
+            <div class="dashboard-card">
+
+                <div class="dashboard-card-icon">
+                    🎤
+                </div>
+
+                <h3>
+                    Mock Interviews
+                </h3>
+
+                <p
+                    class="stat-number"
+                    id="interview-count">
+                    0
+                </p>
+
+            </div>
+
+
+            <!-- Best Score -->
+
+            <div class="dashboard-card">
+
+                <div class="dashboard-card-icon">
+                    🏆
+                </div>
+
+                <h3>
+                    Best Score
+                </h3>
+
+                <p
+                    class="stat-number"
+                    id="best-score">
+                    0%
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- Progress Overview -->
+
+        <section class="progress-overview">
+
+            <h2>
+                Your Progress
+            </h2>
+
+            <div class="progress-card">
+
+                <div class="progress-info">
+
+                    <h3>
+                        Practice Progress
+                    </h3>
+
+                    <p id="progress-text">
+                        0 practice sessions completed
+                    </p>
+
+                </div>
+
+                <div class="progress-bar">
+
+                    <div
+                        class="progress-fill"
+                        id="progress-fill">
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Latest Performance -->
+
+        <section class="latest-performance">
+
+            <h2>
+                Latest Performance
+            </h2>
+
+            <div class="performance-card">
+
+                <div>
+
+                    <h3>
+                        Latest Score
+                    </h3>
+
+                    <p id="latest-score">
+                        0%
+                    </p>
+
+                </div>
+
+
+                <div>
+
+                    <h3>
+                        Last Activity
+                    </h3>
+
+                    <p id="last-activity">
+                        No activity yet
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Quick Actions -->
+
+        <section class="quick-actions">
+
+            <h2>
+                Continue Practicing
+            </h2>
+
+            <p>
+                Choose an activity and continue improving
+                your interview skills.
+            </p>
+
+
+            <div class="action-buttons">
+
+                <a
+                    href="practice.html"
+                    class="dashboard-action">
+
+                    📝 Practice Questions
+
+                </a>
+
+
+                <a
+                    href="mock-interview.html"
+                    class="dashboard-action">
+
+                    🎤 Start Mock Interview
+
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- Preparation Tips -->
+
+        <section class="dashboard-tips">
+
+            <h2>
+                Interview Preparation Tips
+            </h2>
+
+
+            <div class="tips-grid">
+
+
+                <!-- Tip 1 -->
+
+                <div class="tip-card">
+
+                    <h3>
+                        💡 Practice Regularly
+                    </h3>
+
+                    <p>
+                        Practice interview questions regularly
+                        to improve your confidence.
+                    </p>
+
+                </div>
+
+
+                <!-- Tip 2 -->
+
+                <div class="tip-card">
+
+                    <h3>
+                        🎯 Focus on Weak Areas
+                    </h3>
+
+                    <p>
+                        Review your mistakes and work on the
+                        topics where you score lower.
+                    </p>
+
+                </div>
+
+
+                <!-- Tip 3 -->
+
+                <div class="tip-card">
+
+                    <h3>
+                        🎤 Try Mock Interviews
+                    </h3>
+
+                    <p>
+                        Simulate real interviews to improve
+                        your communication and technical skills.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Dashboard JavaScript -->
+
+    <script>
+
+        /* =================================
+           LOGIN STATUS
+           ================================= */
+
+        const loginBtn =
+            document.getElementById("login-btn");
+
+        const loggedInUser =
+            localStorage.getItem("loggedIn");
+
+        const userEmail =
+            localStorage.getItem("userEmail");
+
+
+        /* =================================
+           USER INFORMATION
+           ================================= */
+
+        if (userEmail) {
+
+            document.getElementById("user-email").textContent =
+                userEmail;
+
+        } else {
+
+            document.getElementById("user-email").textContent =
+                "Student";
+
+        }
+
+
+        /* =================================
+           STATISTICS
+           ================================= */
+
+        const interviewCount =
+            Number(
+                localStorage.getItem("interviewCount")
+            ) || 0;
+
+
+        const bestScore =
+            Number(
+                localStorage.getItem("bestScore")
+            ) || 0;
+
+
+        const practiceCount =
+            Number(
+                localStorage.getItem("practiceCount")
+            ) || 0;
+
+
+        const latestScore =
+            Number(
+                localStorage.getItem("latestScore")
+            ) || 0;
+
+
+        const lastActivity =
+            localStorage.getItem("lastActivity")
+            || "No activity yet";
+
+
+        /* =================================
+           DISPLAY STATISTICS
+           ================================= */
+
+        document.getElementById(
+            "interview-count"
+        ).textContent = interviewCount;
+
+
+        document.getElementById(
+            "best-score"
+        ).textContent = bestScore + "%";
+
+
+        document.getElementById(
+            "practice-count"
+        ).textContent = practiceCount;
+
+
+        document.getElementById(
+            "latest-score"
+        ).textContent = latestScore + "%";
+
+
+        document.getElementById(
+            "last-activity"
+        ).textContent = lastActivity;
+
+
+        /* =================================
+           PRACTICE PROGRESS
+           ================================= */
+
+        const progressText =
+            document.getElementById("progress-text");
+
+
+        const progressFill =
+            document.getElementById("progress-fill");
+
+
+        progressText.textContent =
+            practiceCount +
+            " practice sessions completed";
+
+
+        const progressPercentage =
+            Math.min(
+                practiceCount * 10,
+                100
+            );
+
+
+        progressFill.style.width =
+            progressPercentage + "%";
+
+
+        /* =================================
+           LOGOUT
+           ================================= */
+
+        loginBtn.textContent = "Logout";
+
+
+        loginBtn.addEventListener(
+            "click",
+            function () {
+
+                localStorage.removeItem(
+                    "loggedIn"
+                );
+
+                localStorage.removeItem(
+                    "userEmail"
+                );
+
+                window.location.href =
+                    "../index.html";
+
+            }
+        );
+
+    </script>
+
+</body>
+
+</html>
+
