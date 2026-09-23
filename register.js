@@ -120,17 +120,26 @@ registerForm.addEventListener("submit", function (event) {
 
 
     /* =================================
-       CHECK EXISTING USER
+       GET ALL USERS
+    ================================= */
+
+    const users =
+        JSON.parse(localStorage.getItem("registeredUsers")) || [];
+
+
+    /* =================================
+       CHECK EXISTING EMAIL
     ================================= */
 
     const existingUser =
-        JSON.parse(localStorage.getItem("registeredUser"));
+        users.find(function (user) {
+
+            return user.email === email;
+
+        });
 
 
-    if (
-        existingUser &&
-        existingUser.email === email
-    ) {
+    if (existingUser) {
 
         registerMessage.textContent =
             "An account with this email already exists.";
@@ -142,23 +151,42 @@ registerForm.addEventListener("submit", function (event) {
 
 
     /* =================================
-       SAVE USER
+       CREATE NEW USER
     ================================= */
 
     const user = {
+
+        id: Date.now(),
 
         name: name,
 
         email: email,
 
-        password: password
+        password: password,
+
+        practiceCount: 0,
+
+        interviewCount: 0,
+
+        bestScore: 0,
+
+        latestScore: 0,
+
+        lastActivity: "No activity yet"
 
     };
 
 
+    /* =================================
+       SAVE USER
+    ================================= */
+
+    users.push(user);
+
+
     localStorage.setItem(
-        "registeredUser",
-        JSON.stringify(user)
+        "registeredUsers",
+        JSON.stringify(users)
     );
 
 

@@ -351,155 +351,261 @@
 
     <!-- Dashboard JavaScript -->
 
-    <script>
+    <!-- Dashboard JavaScript -->
 
-        /* =================================
-           LOGIN STATUS
-           ================================= */
+<script>
 
-        const loginBtn =
-            document.getElementById("login-btn");
+/* =================================
+   LOGIN STATUS
+================================= */
 
-        const loggedInUser =
-            localStorage.getItem("loggedIn");
+const dashboardLoggedIn =
+    localStorage.getItem("loggedIn");
 
-        const userEmail =
-            localStorage.getItem("userEmail");
-
-
-        /* =================================
-           USER INFORMATION
-           ================================= */
-
-        if (userEmail) {
-
-            document.getElementById("user-email").textContent =
-                userEmail;
-
-        } else {
-
-            document.getElementById("user-email").textContent =
-                "Student";
-
-        }
+const currentUserId =
+    localStorage.getItem("currentUserId");
 
 
-        /* =================================
-           STATISTICS
-           ================================= */
+/* =================================
+   PROTECT DASHBOARD
+================================= */
 
-        const interviewCount =
-            Number(
-                localStorage.getItem("interviewCount")
-            ) || 0;
+if (
+    dashboardLoggedIn !== "true" ||
+    !currentUserId
+) {
 
+    alert("Please login first.");
 
-        const bestScore =
-            Number(
-                localStorage.getItem("bestScore")
-            ) || 0;
-
-
-        const practiceCount =
-            Number(
-                localStorage.getItem("practiceCount")
-            ) || 0;
+    window.location.href =
+        "login.html";
+}
 
 
-        const latestScore =
-            Number(
-                localStorage.getItem("latestScore")
-            ) || 0;
+/* =================================
+   GET CURRENT USER
+================================= */
+
+const users =
+    JSON.parse(
+        localStorage.getItem("registeredUsers")
+    ) || [];
 
 
-        const lastActivity =
-            localStorage.getItem("lastActivity")
-            || "No activity yet";
+let currentUser;
 
 
-        /* =================================
-           DISPLAY STATISTICS
-           ================================= */
+/* Demo account */
 
-        document.getElementById(
-            "interview-count"
-        ).textContent = interviewCount;
+if (currentUserId === "demo") {
 
+    currentUser = {
 
-        document.getElementById(
-            "best-score"
-        ).textContent = bestScore + "%";
+        name: "Student",
 
+        email: "student@gmail.com",
 
-        document.getElementById(
-            "practice-count"
-        ).textContent = practiceCount;
+        practiceCount: 0,
 
+        interviewCount: 0,
 
-        document.getElementById(
-            "latest-score"
-        ).textContent = latestScore + "%";
+        bestScore: 0,
 
+        latestScore: 0,
 
-        document.getElementById(
-            "last-activity"
-        ).textContent = lastActivity;
+        lastActivity: "No activity yet"
+
+    };
+
+}
 
 
-        /* =================================
-           PRACTICE PROGRESS
-           ================================= */
+/* Registered account */
 
-        const progressText =
-            document.getElementById("progress-text");
+else {
 
+    currentUser =
+        users.find(function (user) {
 
-        const progressFill =
-            document.getElementById("progress-fill");
+            return String(user.id) ===
+                String(currentUserId);
 
+        });
 
-        progressText.textContent =
-            practiceCount +
-            " practice sessions completed";
+}
 
 
-        const progressPercentage =
-            Math.min(
-                practiceCount * 10,
-                100
-            );
+/* =================================
+   USER NOT FOUND
+================================= */
+
+if (!currentUser) {
+
+    localStorage.removeItem("loggedIn");
+    localStorage.removeItem("currentUserId");
+    localStorage.removeItem("userEmail");
+    localStorage.removeItem("userName");
+
+    alert(
+        "User account could not be found. Please login again."
+    );
+
+    window.location.href =
+        "login.html";
+}
 
 
-        progressFill.style.width =
-            progressPercentage + "%";
+/* =================================
+   USER INFORMATION
+================================= */
+
+document.getElementById(
+    "user-email"
+).textContent =
+    currentUser.email;
 
 
-        /* =================================
-           LOGOUT
-           ================================= */
+/* Change Student to actual name */
 
-        loginBtn.textContent = "Logout";
+document.querySelector(
+    ".dashboard-profile h2"
+).textContent =
+    currentUser.name;
 
 
-        loginBtn.addEventListener(
-            "click",
-            function () {
+/* =================================
+   USER STATISTICS
+================================= */
 
-                localStorage.removeItem(
-                    "loggedIn"
-                );
+const practiceCount =
+    Number(currentUser.practiceCount) || 0;
 
-                localStorage.removeItem(
-                    "userEmail"
-                );
 
-                window.location.href =
-                    "../index.html";
+const interviewCount =
+    Number(currentUser.interviewCount) || 0;
 
-            }
+
+const bestScore =
+    Number(currentUser.bestScore) || 0;
+
+
+const latestScore =
+    Number(currentUser.latestScore) || 0;
+
+
+const lastActivity =
+    currentUser.lastActivity ||
+    "No activity yet";
+
+
+/* =================================
+   DISPLAY STATISTICS
+================================= */
+
+document.getElementById(
+    "practice-count"
+).textContent =
+    practiceCount;
+
+
+document.getElementById(
+    "interview-count"
+).textContent =
+    interviewCount;
+
+
+document.getElementById(
+    "best-score"
+).textContent =
+    bestScore + "%";
+
+
+document.getElementById(
+    "latest-score"
+).textContent =
+    latestScore + "%";
+
+
+document.getElementById(
+    "last-activity"
+).textContent =
+    lastActivity;
+
+
+/* =================================
+   PRACTICE PROGRESS
+================================= */
+
+const progressText =
+    document.getElementById(
+        "progress-text"
+    );
+
+
+const progressFill =
+    document.getElementById(
+        "progress-fill"
+    );
+
+
+progressText.textContent =
+    practiceCount +
+    " practice sessions completed";
+
+
+const progressPercentage =
+    Math.min(
+        practiceCount * 10,
+        100
+    );
+
+
+progressFill.style.width =
+    progressPercentage + "%";
+
+
+/* =================================
+   LOGOUT
+================================= */
+
+const loginBtn =
+    document.getElementById(
+        "login-btn"
+    );
+
+
+loginBtn.textContent =
+    "Logout";
+
+
+loginBtn.addEventListener(
+    "click",
+    function () {
+
+        localStorage.removeItem(
+            "loggedIn"
         );
 
-    </script>
+        localStorage.removeItem(
+            "currentUserId"
+        );
+
+        localStorage.removeItem(
+            "userEmail"
+        );
+
+        localStorage.removeItem(
+            "userName"
+        );
+
+
+        window.location.href =
+            "../index.html";
+
+    }
+);
+
+</script>
 
 </body>
 
