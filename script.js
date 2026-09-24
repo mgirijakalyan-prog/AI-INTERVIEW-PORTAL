@@ -1,36 +1,38 @@
+
 // ======================================================
 // AI INTERVIEW PREPARATION PORTAL
-// PRACTICE QUESTION DATABASE
+// PRACTICE QUESTIONS JAVASCRIPT
+// ======================================================
+
+
+// ======================================================
+// QUESTION DATABASE
 // ======================================================
 
 const questionData = {
 
-    // ==================================================
-    // FRONTEND
-    // ==================================================
-
     Frontend: [
 
         {
-            question: "What does HTML stand for?",
+            question: "What is HTML?",
             options: [
-                "Hyper Text Markup Language",
-                "High Text Machine Language",
-                "Hyperlink Text Management Language",
-                "Home Tool Markup Language"
+                "A programming language",
+                "A markup language used to structure web pages",
+                "A database",
+                "An operating system"
             ],
-            answer: "Hyper Text Markup Language"
+            answer: 1
         },
 
         {
-            question: "Which language is used to style a web page?",
+            question: "What does CSS stand for?",
             options: [
-                "HTML",
-                "CSS",
-                "Python",
-                "SQL"
+                "Computer Style Sheets",
+                "Creative Style System",
+                "Cascading Style Sheets",
+                "Colorful Style Sheets"
             ],
-            answer: "CSS"
+            answer: 2
         },
 
         {
@@ -41,95 +43,51 @@ const questionData = {
                 "<href>",
                 "<url>"
             ],
-            answer: "<a>"
+            answer: 1
         },
 
         {
-            question: "Which CSS property changes text color?",
+            question: "Which CSS property is used to change text color?",
             options: [
-                "font-style",
-                "background",
+                "font-color",
+                "text-color",
                 "color",
-                "text-size"
+                "foreground"
             ],
-            answer: "color"
-        },
-
-        {
-            question: "Which HTML tag is used to display an image?",
-            options: [
-                "<picture>",
-                "<image>",
-                "<img>",
-                "<src>"
-            ],
-            answer: "<img>"
-        },
-
-        {
-            question: "Which HTML tag is used to create a paragraph?",
-            options: [
-                "<paragraph>",
-                "<p>",
-                "<text>",
-                "<para>"
-            ],
-            answer: "<p>"
+            answer: 2
         },
 
         {
             question: "Which CSS property is used to change the background color?",
             options: [
+                "bgcolor",
                 "background-color",
-                "color",
-                "bg-color",
-                "background-style"
+                "background-style",
+                "color-background"
             ],
-            answer: "background-color"
+            answer: 1
         },
 
         {
-            question: "Which HTML element is used for the largest heading?",
+            question: "Which HTML tag is used to create the largest heading?",
             options: [
                 "<h6>",
                 "<heading>",
                 "<h1>",
                 "<head>"
             ],
-            answer: "<h1>"
+            answer: 2
         },
 
         {
-            question: "Which CSS property controls the size of text?",
+            question: "Which CSS layout system is useful for arranging items in rows and columns?",
             options: [
-                "text-size",
-                "font-size",
-                "font-height",
-                "size"
-            ],
-            answer: "font-size"
-        },
-
-        {
-            question: "Which HTML tag is used to create an unordered list?",
-            options: [
-                "<ol>",
-                "<list>",
-                "<ul>",
-                "<li>"
-            ],
-            answer: "<ul>"
-        },
-
-        {
-            question: "Which CSS layout system is commonly used for one-dimensional layouts?",
-            options: [
+                "Float",
                 "Grid",
-                "Flexbox",
-                "Table",
-                "Float only"
+                "Position",
+                "Inline"
             ],
-            answer: "Flexbox"
+            answer: 1
         },
 
         {
@@ -137,100 +95,143 @@ const questionData = {
             options: [
                 "display: flex",
                 "position: flex",
-                "flex: display",
+                "flexbox: true",
                 "layout: flex"
             ],
-            answer: "display: flex"
+            answer: 0
         },
 
         {
-            question: "What is responsive web design?",
+            question: "Which HTML element is used to insert an image?",
             options: [
-                "A design that works on different screen sizes",
-                "A design only for desktop",
-                "A design without CSS",
-                "A design only for mobile"
+                "<picture>",
+                "<image>",
+                "<img>",
+                "<src>"
             ],
-            answer: "A design that works on different screen sizes"
+            answer: 2
         },
 
         {
-            question: "Which CSS property adds space inside an element?",
+            question: "Which attribute specifies the image path in an img tag?",
             options: [
-                "margin",
-                "padding",
-                "border",
-                "spacing"
-            ],
-            answer: "padding"
-        },
-
-        {
-            question: "Which CSS property adds space outside an element?",
-            options: [
-                "padding",
-                "margin",
-                "border",
-                "outside-space"
-            ],
-            answer: "margin"
-        },
-
-        {
-            question: "Which HTML tag is used to create a button?",
-            options: [
-                "<button>",
-                "<btn>",
-                "<input-button>",
-                "<click>"
-            ],
-            answer: "<button>"
-        },
-
-        {
-            question: "Which attribute provides alternative text for an image?",
-            options: [
+                "href",
                 "src",
-                "title",
-                "alt",
-                "text"
+                "link",
+                "path"
             ],
-            answer: "alt"
+            answer: 1
         },
 
         {
-            question: "Which CSS property is used to make rounded corners?",
+            question: "Which CSS property controls the space inside an element?",
             options: [
-                "corner-radius",
-                "border-radius",
-                "radius",
-                "round-border"
+                "margin",
+                "padding",
+                "spacing",
+                "border"
             ],
-            answer: "border-radius"
+            answer: 1
         },
 
         {
-            question: "Which HTML tag is used to create a form?",
+            question: "Which CSS property controls the space outside an element?",
             options: [
-                "<input>",
-                "<form>",
-                "<field>",
-                "<data>"
+                "padding",
+                "margin",
+                "spacing",
+                "gap"
             ],
-            answer: "<form>"
+            answer: 1
         },
 
         {
-            question: "Which CSS property controls the space between flex items?",
+            question: "Which HTML tag is used to create a paragraph?",
             options: [
-                "space",
-                "gap",
-                "flex-space",
-                "item-gap"
+                "<paragraph>",
+                "<text>",
+                "<p>",
+                "<para>"
             ],
-            answer: "gap"
+            answer: 2
+        },
+
+        {
+            question: "Which CSS property is used to make text bold?",
+            options: [
+                "font-weight",
+                "font-bold",
+                "text-weight",
+                "bold"
+            ],
+            answer: 0
+        },
+
+        {
+            question: "Which HTML tag is used to create an unordered list?",
+            options: [
+                "<ol>",
+                "<ul>",
+                "<list>",
+                "<li>"
+            ],
+            answer: 1
+        },
+
+        {
+            question: "Which HTML tag represents a list item?",
+            options: [
+                "<item>",
+                "<list>",
+                "<li>",
+                "<ul>"
+            ],
+            answer: 2
+        },
+
+        {
+            question: "Which CSS property is used to align text?",
+            options: [
+                "text-align",
+                "align-text",
+                "font-align",
+                "text-position"
+            ],
+            answer: 0
+        },
+
+        {
+            question: "What is the purpose of the viewport meta tag?",
+            options: [
+                "To change colors",
+                "To make websites responsive on different devices",
+                "To add JavaScript",
+                "To connect a database"
+            ],
+            answer: 1
+        },
+
+        {
+            question: "Which CSS property is used to control the size of text?",
+            options: [
+                "text-size",
+                "font-size",
+                "size",
+                "font-height"
+            ],
+            answer: 1
+        },
+
+        {
+            question: "Which HTML tag is commonly used to create a navigation section?",
+            options: [
+                "<navigation>",
+                "<nav>",
+                "<menu-bar>",
+                "<navigate>"
+            ],
+            answer: 1
         }
-
     ],
 
 
@@ -241,47 +242,58 @@ const questionData = {
     JavaScript: [
 
         {
-            question: "Which keyword declares a variable in JavaScript?",
+            question: "What is JavaScript?",
+            options: [
+                "A database",
+                "A programming language used to add interactivity to web pages",
+                "A CSS framework",
+                "An operating system"
+            ],
+            answer: 1
+        },
+
+        {
+            question: "Which keyword is used to declare a variable?",
             options: [
                 "var",
-                "int",
-                "string",
-                "define"
+                "variable",
+                "declare",
+                "letvar"
             ],
-            answer: "var"
+            answer: 0
+        },
+
+        {
+            question: "Which keyword can be used to declare a constant?",
+            options: [
+                "constant",
+                "const",
+                "fixed",
+                "static"
+            ],
+            answer: 1
         },
 
         {
             question: "Which symbol is used for strict equality?",
             options: [
-                "=",
                 "==",
+                "=",
                 "===",
                 "!="
             ],
-            answer: "==="
+            answer: 2
         },
 
         {
-            question: "Which method adds an element to the end of an array?",
+            question: "Which method is used to display a message in the browser console?",
             options: [
-                "push()",
-                "add()",
-                "append()",
-                "insert()"
+                "console.log()",
+                "print()",
+                "display()",
+                "message()"
             ],
-            answer: "push()"
-        },
-
-        {
-            question: "Which keyword is used to define a function?",
-            options: [
-                "function",
-                "func",
-                "define",
-                "method"
-            ],
-            answer: "function"
+            answer: 0
         },
 
         {
@@ -292,84 +304,106 @@ const questionData = {
                 "JSON.object()",
                 "JSON.read()"
             ],
-            answer: "JSON.parse()"
-        },
-
-        {
-            question: "Which keyword creates a block-scoped variable that can be reassigned?",
-            options: [
-                "const",
-                "let",
-                "static",
-                "define"
-            ],
-            answer: "let"
-        },
-
-        {
-            question: "Which keyword creates a variable that cannot normally be reassigned?",
-            options: [
-                "let",
-                "var",
-                "const",
-                "fixed"
-            ],
-            answer: "const"
-        },
-
-        {
-            question: "What is an array in JavaScript?",
-            options: [
-                "A collection of values",
-                "A CSS property",
-                "A database",
-                "A function only"
-            ],
-            answer: "A collection of values"
-        },
-
-        {
-            question: "Which method removes the last element from an array?",
-            options: [
-                "remove()",
-                "pop()",
-                "delete()",
-                "last()"
-            ],
-            answer: "pop()"
+            answer: 0
         },
 
         {
             question: "Which method converts a JavaScript object into JSON text?",
             options: [
-                "JSON.parse()",
-                "JSON.stringify()",
                 "JSON.convert()",
+                "JSON.stringify()",
+                "JSON.parse()",
                 "JSON.text()"
             ],
-            answer: "JSON.stringify()"
+            answer: 1
         },
 
         {
-            question: "What does DOM stand for?",
+            question: "Which keyword is used to define a function?",
             options: [
-                "Document Object Model",
-                "Data Object Method",
-                "Document Oriented Model",
-                "Digital Object Management"
+                "function",
+                "method",
+                "define",
+                "func"
             ],
-            answer: "Document Object Model"
+            answer: 0
         },
 
         {
-            question: "Which method selects an element by its ID?",
+            question: "Which event occurs when a button is clicked?",
+            options: [
+                "onhover",
+                "onclick",
+                "onpress",
+                "clickbutton"
+            ],
+            answer: 1
+        },
+
+        {
+            question: "Which method selects an HTML element by its ID?",
             options: [
                 "getElementById()",
                 "selectById()",
                 "getId()",
                 "findId()"
             ],
-            answer: "getElementById()"
+            answer: 0
+        },
+
+        {
+            question: "Which symbol is used for a single-line comment?",
+            options: [
+                "<!-- -->",
+                "//",
+                "/* */",
+                "#"
+            ],
+            answer: 1
+        },
+
+        {
+            question: "Which data type stores true or false?",
+            options: [
+                "String",
+                "Number",
+                "Boolean",
+                "Object"
+            ],
+            answer: 2
+        },
+
+        {
+            question: "Which method adds an item to the end of an array?",
+            options: [
+                "push()",
+                "add()",
+                "append()",
+                "insert()"
+            ],
+            answer: 0
+        },
+
+        {
+            question: "Which method removes the last item from an array?",
+            options: [
+                "remove()",
+                "delete()",
+                "pop()",
+                "last()"
+            ],
+            answer: 2
+        },
+
+        {
+            question: "What does DOM stand for?",
+            options: [
+                "Document Object Model",
+                "Data Object Management",
+                "Document Oriented Model",
+                "Digital Object Method"
+            ],
+            answer: 0
         },
 
         {
@@ -378,9 +412,9 @@ const questionData = {
                 "||",
                 "&&",
                 "!",
-                "AND"
+                "&"
             ],
-            answer: "&&"
+            answer: 1
         },
 
         {
@@ -389,77 +423,43 @@ const questionData = {
                 "&&",
                 "||",
                 "!",
-                "OR"
+                "|"
             ],
-            answer: "||"
+            answer: 1
         },
 
         {
-            question: "What does NaN mean in JavaScript?",
+            question: "Which loop is commonly used to iterate through an array?",
+            options: [
+                "for",
+                "repeat",
+                "loop",
+                "iterate"
+            ],
+            answer: 0
+        },
+
+        {
+            question: "What is NaN?",
             options: [
                 "Not a Number",
-                "No Available Number",
-                "New Assigned Number",
-                "Null and Number"
+                "New Array Number",
+                "Null and Number",
+                "No Assigned Name"
             ],
-            answer: "Not a Number"
+            answer: 0
         },
 
         {
-            question: "Which function converts a string into an integer?",
+            question: "Which function converts a string to an integer?",
             options: [
                 "parseInt()",
                 "toInteger()",
-                "integer()",
-                "convertInt()"
+                "convertInt()",
+                "integer()"
             ],
-            answer: "parseInt()"
-        },
-
-        {
-            question: "Which keyword is used to return a value from a function?",
-            options: [
-                "send",
-                "return",
-                "output",
-                "value"
-            ],
-            answer: "return"
-        },
-
-        {
-            question: "Which event occurs when a user clicks an element?",
-            options: [
-                "hover",
-                "click",
-                "change",
-                "submit"
-            ],
-            answer: "click"
-        },
-
-        {
-            question: "Which method creates a new array by transforming each element?",
-            options: [
-                "map()",
-                "change()",
-                "transform()",
-                "loop()"
-            ],
-            answer: "map()"
-        },
-
-        {
-            question: "Which method filters array elements based on a condition?",
-            options: [
-                "filter()",
-                "select()",
-                "choose()",
-                "findAll()"
-            ],
-            answer: "filter()"
+            answer: 0
         }
-
     ],
 
 
@@ -470,6 +470,50 @@ const questionData = {
     Programming: [
 
         {
+            question: "What is an algorithm?",
+            options: [
+                "A programming language",
+                "A step-by-step procedure for solving a problem",
+                "A database",
+                "A compiler"
+            ],
+            answer: 1
+        },
+
+        {
+            question: "What is a variable?",
+            options: [
+                "A container used to store data",
+                "A loop",
+                "A function",
+                "A compiler"
+            ],
+            answer: 0
+        },
+
+        {
+            question: "What is a loop?",
+            options: [
+                "A way to repeat a block of code",
+                "A variable",
+                "A database",
+                "A class"
+            ],
+            answer: 0
+        },
+
+        {
+            question: "Which data structure follows LIFO?",
+            options: [
+                "Queue",
+                "Stack",
+                "Array",
+                "Tree"
+            ],
+            answer: 1
+        },
+
+        {
             question: "Which data structure follows FIFO?",
             options: [
                 "Stack",
@@ -477,150 +521,29 @@ const questionData = {
                 "Tree",
                 "Graph"
             ],
-            answer: "Queue"
-        },
-
-        {
-            question: "Which data structure follows LIFO?",
-            options: [
-                "Queue",
-                "Array",
-                "Stack",
-                "Tree"
-            ],
-            answer: "Stack"
-        },
-
-        {
-            question: "What is a loop used for?",
-            options: [
-                "Repeating instructions",
-                "Deleting a program",
-                "Creating hardware",
-                "Installing software"
-            ],
-            answer: "Repeating instructions"
-        },
-
-        {
-            question: "Which is a programming language?",
-            options: [
-                "Python",
-                "HTML",
-                "CSS",
-                "HTTP"
-            ],
-            answer: "Python"
-        },
-
-        {
-            question: "What does OOP stand for?",
-            options: [
-                "Object Oriented Programming",
-                "Open Operating Program",
-                "Object Operating Process",
-                "Online Object Programming"
-            ],
-            answer: "Object Oriented Programming"
-        },
-
-        {
-            question: "Which data structure stores elements in indexed positions?",
-            options: [
-                "Array",
-                "Graph",
-                "Tree",
-                "Queue only"
-            ],
-            answer: "Array"
-        },
-
-        {
-            question: "What is an algorithm?",
-            options: [
-                "A step-by-step solution to a problem",
-                "A programming language",
-                "A computer",
-                "A database"
-            ],
-            answer: "A step-by-step solution to a problem"
-        },
-
-        {
-            question: "Which programming concept allows one class to acquire properties of another?",
-            options: [
-                "Inheritance",
-                "Compilation",
-                "Iteration",
-                "Looping"
-            ],
-            answer: "Inheritance"
-        },
-
-        {
-            question: "What is encapsulation?",
-            options: [
-                "Bundling data and methods together",
-                "Deleting data",
-                "Creating loops",
-                "Running multiple programs"
-            ],
-            answer: "Bundling data and methods together"
-        },
-
-        {
-            question: "What is polymorphism?",
-            options: [
-                "One interface with different implementations",
-                "A type of database",
-                "A sorting algorithm",
-                "A memory location"
-            ],
-            answer: "One interface with different implementations"
-        },
-
-        {
-            question: "Which sorting algorithm repeatedly compares adjacent elements?",
-            options: [
-                "Bubble Sort",
-                "Binary Search",
-                "Depth First Search",
-                "Hashing"
-            ],
-            answer: "Bubble Sort"
-        },
-
-        {
-            question: "What is a variable?",
-            options: [
-                "A named storage location for data",
-                "A computer device",
-                "A network",
-                "A database table"
-            ],
-            answer: "A named storage location for data"
+            answer: 1
         },
 
         {
             question: "What is recursion?",
             options: [
                 "A function calling itself",
-                "A database query",
-                "A type of variable",
-                "A sorting method only"
+                "A variable changing",
+                "A loop ending",
+                "A class declaration"
             ],
-            answer: "A function calling itself"
+            answer: 0
         },
 
         {
-            question: "Which data structure uses nodes connected by edges?",
+            question: "What is debugging?",
             options: [
-                "Array",
-                "Graph",
-                "Stack",
-                "String"
+                "Creating a database",
+                "Finding and fixing errors in code",
+                "Writing documentation",
+                "Installing software"
             ],
-            answer: "Graph"
+            answer: 1
         },
 
         {
@@ -628,67 +551,143 @@ const questionData = {
             options: [
                 "A program that translates source code",
                 "A database",
-                "A web browser",
-                "A text editor"
+                "An operating system",
+                "A web browser"
             ],
-            answer: "A program that translates source code"
+            answer: 0
         },
 
         {
-            question: "Which search algorithm works efficiently on a sorted array?",
+            question: "What is object-oriented programming?",
             options: [
-                "Binary Search",
-                "Bubble Search",
-                "Linear Sort",
-                "Stack Search"
+                "Programming using objects and classes",
+                "Programming only with functions",
+                "Database programming",
+                "HTML programming"
             ],
-            answer: "Binary Search"
+            answer: 0
         },
 
         {
-            question: "What is debugging?",
+            question: "Which concept hides internal implementation details?",
             options: [
-                "Finding and fixing program errors",
-                "Writing HTML",
-                "Creating databases",
-                "Installing software"
+                "Inheritance",
+                "Encapsulation",
+                "Polymorphism",
+                "Compilation"
             ],
-            answer: "Finding and fixing program errors"
+            answer: 1
         },
 
         {
-            question: "What is a data structure?",
+            question: "Which OOP concept allows a class to inherit properties from another class?",
             options: [
-                "A way to organize and store data",
-                "A programming language",
-                "A computer monitor",
-                "A network cable"
+                "Encapsulation",
+                "Inheritance",
+                "Abstraction",
+                "Compilation"
             ],
-            answer: "A way to organize and store data"
+            answer: 1
         },
 
         {
-            question: "Which is an example of a linear data structure?",
+            question: "Which OOP concept allows the same interface to have different implementations?",
             options: [
-                "Array",
-                "Tree",
-                "Graph",
-                "Network"
+                "Inheritance",
+                "Polymorphism",
+                "Encapsulation",
+                "Iteration"
             ],
-            answer: "Array"
+            answer: 1
         },
 
         {
-            question: "What is time complexity used to describe?",
+            question: "What is a function?",
             options: [
-                "How an algorithm's running time grows",
-                "The size of a monitor",
-                "Database storage",
-                "Internet speed"
+                "A reusable block of code",
+                "A database",
+                "A variable",
+                "A compiler"
             ],
-            answer: "How an algorithm's running time grows"
+            answer: 0
+        },
+
+        {
+            question: "What is syntax?",
+            options: [
+                "Rules for writing code",
+                "A database",
+                "A variable",
+                "An operating system"
+            ],
+            answer: 0
+        },
+
+        {
+            question: "What is an array?",
+            options: [
+                "A collection of values",
+                "A function",
+                "A class",
+                "A compiler"
+            ],
+            answer: 0
+        },
+
+        {
+            question: "What is a string?",
+            options: [
+                "A collection of characters",
+                "A number",
+                "A Boolean",
+                "A loop"
+            ],
+            answer: 0
+        },
+
+        {
+            question: "What is an integer?",
+            options: [
+                "A whole number",
+                "A character",
+                "A string",
+                "A Boolean"
+            ],
+            answer: 0
+        },
+
+        {
+            question: "What is source code?",
+            options: [
+                "Code written by a programmer",
+                "Machine hardware",
+                "A database",
+                "A compiled application only"
+            ],
+            answer: 0
+        },
+
+        {
+            question: "What is an IDE?",
+            options: [
+                "Integrated Development Environment",
+                "Internet Data Engine",
+                "Internal Design Editor",
+                "Integrated Database Environment"
+            ],
+            answer: 0
+        },
+
+        {
+            question: "What is software testing?",
+            options: [
+                "Checking software for errors and expected behavior",
+                "Creating hardware",
+                "Deleting code",
+                "Designing a database only"
+            ],
+            answer: 0
         }
-
     ],
 
 
@@ -699,25 +698,36 @@ const questionData = {
     Database: [
 
         {
-            question: "What does SQL stand for?",
+            question: "What is a database?",
             options: [
-                "Structured Query Language",
-                "Simple Question Language",
-                "System Query Logic",
-                "Structured Question Logic"
+                "A collection of organized data",
+                "A programming language",
+                "A web browser",
+                "An operating system"
             ],
-            answer: "Structured Query Language"
+            answer: 0
         },
 
         {
-            question: "Which command is used to retrieve data?",
+            question: "What does SQL stand for?",
+            options: [
+                "Structured Query Language",
+                "Simple Query Language",
+                "System Query Language",
+                "Structured Question Language"
+            ],
+            answer: 0
+        },
+
+        {
+            question: "Which command is used to retrieve data from a database?",
             options: [
                 "GET",
                 "SELECT",
                 "FETCH",
                 "READ"
             ],
-            answer: "SELECT"
+            answer: 1
         },
 
         {
@@ -728,150 +738,84 @@ const questionData = {
                 "CREATE",
                 "PUT"
             ],
-            answer: "INSERT"
+            answer: 1
         },
 
         {
-            question: "Which key uniquely identifies a record?",
+            question: "Which command is used to modify existing data?",
             options: [
-                "Foreign Key",
-                "Primary Key",
-                "Secondary Key",
-                "Normal Key"
+                "UPDATE",
+                "CHANGE",
+                "MODIFY",
+                "ALTER"
             ],
-            answer: "Primary Key"
+            answer: 0
         },
 
         {
-            question: "Which command removes a table?",
+            question: "Which command is used to delete data?",
             options: [
                 "REMOVE",
                 "DELETE",
                 "DROP",
                 "CLEAR"
             ],
-            answer: "DROP"
+            answer: 1
         },
 
         {
-            question: "Which SQL command modifies existing records?",
+            question: "What is a primary key?",
             options: [
-                "UPDATE",
-                "CHANGE",
-                "MODIFY",
-                "EDIT"
+                "A unique identifier for a record",
+                "A password",
+                "A database name",
+                "A table name"
             ],
-            answer: "UPDATE"
-        },
-
-        {
-            question: "Which SQL command removes selected records?",
-            options: [
-                "DELETE",
-                "DROP",
-                "REMOVE TABLE",
-                "CLEAR"
-            ],
-            answer: "DELETE"
-        },
-
-        {
-            question: "What is a database?",
-            options: [
-                "An organized collection of data",
-                "A programming language",
-                "A web browser",
-                "An operating system"
-            ],
-            answer: "An organized collection of data"
+            answer: 0
         },
 
         {
             question: "What is a foreign key?",
             options: [
-                "A key that references another table",
-                "A key used only for passwords",
-                "The main key of a database",
-                "A duplicate key"
+                "A key that links tables",
+                "A password",
+                "A primary database",
+                "A username"
             ],
-            answer: "A key that references another table"
+            answer: 0
         },
 
         {
-            question: "What is a table in a relational database?",
+            question: "What is a table?",
             options: [
-                "A collection of rows and columns",
-                "A programming function",
-                "A web page",
-                "A file extension"
+                "A structure that stores data in rows and columns",
+                "A programming language",
+                "A server",
+                "A password"
             ],
-            answer: "A collection of rows and columns"
+            answer: 0
         },
 
         {
-            question: "Which SQL clause is used to filter rows?",
+            question: "What is a row in a database?",
             options: [
-                "WHERE",
-                "FILTER",
-                "WHEN",
-                "IF"
+                "A record",
+                "A database",
+                "A column name",
+                "A query"
             ],
-            answer: "WHERE"
+            answer: 0
         },
 
         {
-            question: "Which SQL clause is used to sort results?",
+            question: "What is a column?",
             options: [
-                "SORT BY",
-                "ORDER BY",
-                "GROUP BY",
-                "ARRANGE"
+                "A field representing a particular attribute",
+                "A complete database",
+                "A table",
+                "A query"
             ],
-            answer: "ORDER BY"
-        },
-
-        {
-            question: "Which SQL function counts rows?",
-            options: [
-                "COUNT()",
-                "TOTAL()",
-                "NUMBER()",
-                "ROWS()"
-            ],
-            answer: "COUNT()"
-        },
-
-        {
-            question: "Which clause groups rows with similar values?",
-            options: [
-                "GROUP BY",
-                "ORDER BY",
-                "COLLECT BY",
-                "COMBINE BY"
-            ],
-            answer: "GROUP BY"
-        },
-
-        {
-            question: "What does DBMS stand for?",
-            options: [
-                "Database Management System",
-                "Data Backup Management Service",
-                "Database Machine System",
-                "Data Management Software"
-            ],
-            answer: "Database Management System"
-        },
-
-        {
-            question: "Which command creates a new database table?",
-            options: [
-                "CREATE TABLE",
-                "NEW TABLE",
-                "MAKE TABLE",
-                "ADD TABLE"
-            ],
-            answer: "CREATE TABLE"
+            answer: 0
         },
 
         {
@@ -879,45 +823,99 @@ const questionData = {
             options: [
                 "Organizing data to reduce redundancy",
                 "Deleting a database",
-                "Creating passwords",
-                "Sorting rows"
+                "Encrypting a password",
+                "Creating a server"
             ],
-            answer: "Organizing data to reduce redundancy"
+            answer: 0
         },
 
         {
-            question: "What is a record in a database table?",
+            question: "What does DBMS stand for?",
             options: [
-                "A row",
-                "A column",
-                "A database",
-                "A query"
+                "Database Management System",
+                "Data Backup Management Software",
+                "Database Machine System",
+                "Data Management Service"
             ],
-            answer: "A row"
+            answer: 0
         },
 
         {
-            question: "What is a field in a database table?",
+            question: "Which SQL clause filters records?",
             options: [
-                "A column",
-                "A row",
-                "A database",
-                "A query"
+                "WHERE",
+                "FILTER",
+                "SEARCH",
+                "SELECT"
             ],
-            answer: "A column"
+            answer: 0
         },
 
         {
-            question: "Which SQL operator is commonly used for pattern matching?",
+            question: "Which SQL clause sorts results?",
             options: [
-                "LIKE",
-                "MATCHING",
-                "PATTERN",
-                "SEARCH"
+                "SORT BY",
+                "ORDER BY",
+                "GROUP BY",
+                "ARRANGE BY"
             ],
-            answer: "LIKE"
+            answer: 1
+        },
+
+        {
+            question: "Which SQL clause groups rows?",
+            options: [
+                "GROUP BY",
+                "ORDER BY",
+                "COLLECT BY",
+                "JOIN BY"
+            ],
+            answer: 0
+        },
+
+        {
+            question: "What is a query?",
+            options: [
+                "A request for data or an operation on a database",
+                "A database password",
+                "A table",
+                "A column"
+            ],
+            answer: 0
+        },
+
+        {
+            question: "What is a database transaction?",
+            options: [
+                "A logical unit of database operations",
+                "A database table",
+                "A password",
+                "A column"
+            ],
+            answer: 0
+        },
+
+        {
+            question: "Which SQL command creates a table?",
+            options: [
+                "MAKE TABLE",
+                "CREATE TABLE",
+                "NEW TABLE",
+                "ADD TABLE"
+            ],
+            answer: 1
+        },
+
+        {
+            question: "Which SQL command removes a table?",
+            options: [
+                "REMOVE TABLE",
+                "DELETE TABLE",
+                "DROP TABLE",
+                "CLEAR TABLE"
+            ],
+            answer: 2
         }
-
     ],
 
 
@@ -928,225 +926,224 @@ const questionData = {
     HR: [
 
         {
-            question: "What should you do when an interviewer asks 'Tell me about yourself'?",
+            question: "Tell me about yourself.",
             options: [
                 "Give a short professional introduction",
-                "Tell your entire life story",
-                "Stay silent",
-                "Talk only about hobbies"
+                "Talk only about hobbies",
+                "Give your complete family history",
+                "Say nothing"
             ],
-            answer: "Give a short professional introduction"
+            answer: 0
         },
 
         {
-            question: "What is an appropriate interview dress code?",
+            question: "What are your strengths?",
             options: [
-                "Professional attire",
-                "Sleepwear",
-                "Sportswear",
-                "Party clothes"
-            ],
-            answer: "Professional attire"
-        },
-
-        {
-            question: "What should you do when you don't know an answer?",
-            options: [
-                "Be honest and explain what you know",
-                "Make up an answer",
-                "Leave the interview",
-                "Argue with the interviewer"
-            ],
-            answer: "Be honest and explain what you know"
-        },
-
-        {
-            question: "Why should you research a company before an interview?",
-            options: [
-                "To understand the company and role",
-                "To avoid answering questions",
-                "To memorize random facts",
-                "It is unnecessary"
-            ],
-            answer: "To understand the company and role"
-        },
-
-        {
-            question: "What is an important interview skill?",
-            options: [
-                "Clear communication",
-                "Interrupting",
-                "Avoiding eye contact",
-                "Speaking as fast as possible"
-            ],
-            answer: "Clear communication"
-        },
-
-        {
-            question: "How should you answer a question about your strengths?",
-            options: [
-                "Give relevant strengths with examples",
+                "Mention relevant positive qualities with examples",
                 "Say you have no strengths",
-                "Talk only about salary",
-                "Ignore the question"
-            ],
-            answer: "Give relevant strengths with examples"
-        },
-
-        {
-            question: "How should you discuss your weakness?",
-            options: [
-                "Mention a genuine weakness and how you are improving it",
-                "Say you have no weaknesses",
-                "Blame other people",
+                "Only mention marks",
                 "Avoid answering"
             ],
-            answer: "Mention a genuine weakness and how you are improving it"
+            answer: 0
         },
 
         {
-            question: "What should you do before attending an interview?",
+            question: "What is one weakness you are working on?",
             options: [
-                "Research the company and job role",
-                "Arrive without preparation",
-                "Ignore the job description",
-                "Memorize unrelated information"
+                "Give an honest professional weakness and improvement plan",
+                "Say you have no weaknesses",
+                "Blame someone else",
+                "Refuse to answer"
             ],
-            answer: "Research the company and job role"
+            answer: 0
         },
 
         {
-            question: "What should you do if you arrive late for an interview?",
+            question: "Why should we hire you?",
             options: [
-                "Apologize and briefly explain the situation",
-                "Blame the interviewer",
-                "Leave without saying anything",
-                "Pretend nothing happened"
-            ],
-            answer: "Apologize and briefly explain the situation"
-        },
-
-        {
-            question: "How should you communicate during an interview?",
-            options: [
-                "Clearly and confidently",
-                "Very quietly",
-                "Aggressively",
-                "Without listening"
-            ],
-            answer: "Clearly and confidently"
-        },
-
-        {
-            question: "What is teamwork?",
-            options: [
-                "Working cooperatively toward a common goal",
-                "Working completely alone",
-                "Avoiding responsibilities",
-                "Competing with teammates"
-            ],
-            answer: "Working cooperatively toward a common goal"
-        },
-
-        {
-            question: "How should you respond to criticism?",
-            options: [
-                "Listen and use it to improve",
-                "Argue immediately",
-                "Ignore everyone",
-                "Become angry"
-            ],
-            answer: "Listen and use it to improve"
-        },
-
-        {
-            question: "Why is punctuality important in the workplace?",
-            options: [
-                "It demonstrates reliability",
-                "It guarantees promotion",
-                "It replaces skills",
-                "It is not important"
-            ],
-            answer: "It demonstrates reliability"
-        },
-
-        {
-            question: "What should you do when asked about salary expectations?",
-            options: [
-                "Give a reasonable researched range",
-                "Demand an extremely high amount",
-                "Refuse to answer rudely",
-                "Say any random number"
-            ],
-            answer: "Give a reasonable researched range"
-        },
-
-        {
-            question: "What is a good way to handle a difficult coworker?",
-            options: [
-                "Communicate professionally and focus on solving the issue",
-                "Start an argument",
-                "Ignore all work",
-                "Insult the coworker"
-            ],
-            answer: "Communicate professionally and focus on solving the issue"
-        },
-
-        {
-            question: "Why is active listening important during an interview?",
-            options: [
-                "It helps you understand the question correctly",
-                "It makes the interview longer",
-                "It avoids communication",
-                "It replaces preparation"
-            ],
-            answer: "It helps you understand the question correctly"
-        },
-
-        {
-            question: "What should you do after an interview?",
-            options: [
-                "Thank the interviewer",
-                "Demand immediate selection",
-                "Ignore the interviewer",
-                "Call repeatedly"
-            ],
-            answer: "Thank the interviewer"
-        },
-
-        {
-            question: "What is a professional way to answer 'Why should we hire you?'",
-            options: [
-                "Connect your skills and experience to the role",
-                "Say you need money",
+                "Explain your relevant skills and willingness to contribute",
                 "Say you are better than everyone",
-                "Avoid the question"
+                "Discuss salary only",
+                "Say you need money"
             ],
-            answer: "Connect your skills and experience to the role"
+            answer: 0
         },
 
         {
-            question: "What should you do if you disagree with an interviewer?",
+            question: "Where do you see yourself in five years?",
             options: [
-                "Explain your viewpoint respectfully",
-                "Argue aggressively",
-                "Interrupt them",
-                "Walk away"
+                "Describe realistic professional growth",
+                "Say you have no goals",
+                "Talk only about holidays",
+                "Avoid answering"
             ],
-            answer: "Explain your viewpoint respectfully"
+            answer: 0
         },
 
         {
-            question: "What is a good interview preparation strategy?",
+            question: "Why do you want this job?",
             options: [
-                "Practice common questions and research the role",
-                "Do no preparation",
-                "Memorize every possible answer",
-                "Avoid practicing"
+                "Connect the role with your skills and career goals",
+                "Say because everyone else applied",
+                "Say because of free food",
+                "Avoid answering"
             ],
-            answer: "Practice common questions and research the role"
+            answer: 0
+        },
+
+        {
+            question: "How do you handle pressure?",
+            options: [
+                "Explain how you prioritize and manage tasks",
+                "Say you cannot handle pressure",
+                "Blame teammates",
+                "Ignore deadlines"
+            ],
+            answer: 0
+        },
+
+        {
+            question: "How do you handle failure?",
+            options: [
+                "Learn from mistakes and improve",
+                "Give up",
+                "Blame others",
+                "Ignore the problem"
+            ],
+            answer: 0
+        },
+
+        {
+            question: "How do you work in a team?",
+            options: [
+                "Communicate, cooperate and contribute",
+                "Avoid communication",
+                "Always work alone",
+                "Ignore team members"
+            ],
+            answer: 0
+        },
+
+        {
+            question: "How do you resolve conflicts?",
+            options: [
+                "Discuss the issue calmly and find a solution",
+                "Argue",
+                "Ignore everyone",
+                "Quit immediately"
+            ],
+            answer: 0
+        },
+
+        {
+            question: "What motivates you?",
+            options: [
+                "Mention meaningful professional motivators",
+                "Say nothing motivates you",
+                "Only money",
+                "Avoid answering"
+            ],
+            answer: 0
+        },
+
+        {
+            question: "Are you willing to learn new technologies?",
+            options: [
+                "Yes, and explain your approach to learning",
+                "No",
+                "Only if forced",
+                "Never"
+            ],
+            answer: 0
+        },
+
+        {
+            question: "How do you prioritize tasks?",
+            options: [
+                "Based on urgency, importance and deadlines",
+                "Randomly",
+                "Only the easiest tasks",
+                "Ignore deadlines"
+            ],
+            answer: 0
+        },
+
+        {
+            question: "What are your career goals?",
+            options: [
+                "Explain realistic goals and development plans",
+                "Say you have none",
+                "Avoid answering",
+                "Only discuss vacations"
+            ],
+            answer: 0
+        },
+
+        {
+            question: "How do you handle criticism?",
+            options: [
+                "Listen, evaluate and use constructive feedback",
+                "Get angry",
+                "Ignore it",
+                "Blame others"
+            ],
+            answer: 0
+        },
+
+        {
+            question: "What makes you a good team member?",
+            options: [
+                "Communication, reliability and cooperation",
+                "Working against the team",
+                "Avoiding responsibility",
+                "Ignoring others"
+            ],
+            answer: 0
+        },
+
+        {
+            question: "How do you manage deadlines?",
+            options: [
+                "Plan tasks and track progress",
+                "Wait until the last moment",
+                "Ignore them",
+                "Ask others to do everything"
+            ],
+            answer: 0
+        },
+
+        {
+            question: "How do you learn new skills?",
+            options: [
+                "Practice, study resources and projects",
+                "Avoid learning",
+                "Only watch videos",
+                "Wait for someone else"
+            ],
+            answer: 0
+        },
+
+        {
+            question: "What is your biggest achievement?",
+            options: [
+                "Describe a meaningful achievement and what you learned",
+                "Say nothing",
+                "Only discuss entertainment",
+                "Avoid answering"
+            ],
+            answer: 0
+        },
+
+        {
+            question: "Do you have any questions for us?",
+            options: [
+                "Ask relevant questions about the role or organization",
+                "Say no without thinking",
+                "Ask only about holidays",
+                "Ask for personal favors"
+            ],
+            answer: 0
         }
-
     ],
 
 
@@ -1157,113 +1154,14 @@ const questionData = {
     Aptitude: [
 
         {
-            question: "What is 10 + 20?",
-            options: [
-                "20",
-                "30",
-                "40",
-                "50"
-            ],
-            answer: "30"
-        },
-
-        {
-            question: "What is 15 × 2?",
-            options: [
-                "20",
-                "25",
-                "30",
-                "35"
-            ],
-            answer: "30"
-        },
-
-        {
-            question: "What is 100 ÷ 10?",
-            options: [
-                "5",
-                "10",
-                "15",
-                "20"
-            ],
-            answer: "10"
-        },
-
-        {
-            question: "If a car travels 60 km in 1 hour, how far does it travel in 3 hours?",
-            options: [
-                "120 km",
-                "150 km",
-                "180 km",
-                "240 km"
-            ],
-            answer: "180 km"
-        },
-
-        {
-            question: "What is 25% of 100?",
+            question: "What is 20% of 100?",
             options: [
                 "10",
                 "20",
-                "25",
-                "50"
-            ],
-            answer: "25"
-        },
-
-        {
-            question: "What is 20% of 200?",
-            options: [
-                "20",
                 "30",
-                "40",
-                "50"
+                "40"
             ],
-            answer: "40"
-        },
-
-        {
-            question: "What is 12 × 5?",
-            options: [
-                "50",
-                "60",
-                "70",
-                "80"
-            ],
-            answer: "60"
-        },
-
-        {
-            question: "What is 144 ÷ 12?",
-            options: [
-                "10",
-                "11",
-                "12",
-                "14"
-            ],
-            answer: "12"
-        },
-
-        {
-            question: "What is 50% of 80?",
-            options: [
-                "20",
-                "30",
-                "40",
-                "50"
-            ],
-            answer: "40"
-        },
-
-        {
-            question: "If 5 pens cost ₹50, what is the cost of one pen?",
-            options: [
-                "₹5",
-                "₹10",
-                "₹15",
-                "₹20"
-            ],
-            answer: "₹10"
+            answer: 1
         },
 
         {
@@ -1274,40 +1172,117 @@ const questionData = {
                 "20",
                 "30"
             ],
-            answer: "15"
+            answer: 1
         },
 
         {
-            question: "What is 30% of 300?",
+            question: "If a number is doubled from 10, what is the result?",
             options: [
-                "60",
-                "90",
-                "100",
-                "120"
+                "15",
+                "20",
+                "25",
+                "30"
             ],
-            answer: "90"
+            answer: 1
         },
 
         {
-            question: "A train travels 120 km in 2 hours. What is its speed?",
+            question: "What is 15 + 25?",
             options: [
-                "40 km/h",
-                "50 km/h",
-                "60 km/h",
-                "80 km/h"
+                "30",
+                "35",
+                "40",
+                "45"
             ],
-            answer: "60 km/h"
+            answer: 2
         },
 
         {
-            question: "What is 7²?",
+            question: "What is 100 - 45?",
             options: [
-                "14",
-                "21",
-                "49",
-                "56"
+                "45",
+                "50",
+                "55",
+                "65"
             ],
-            answer: "49"
+            answer: 2
+        },
+
+        {
+            question: "What is 8 × 7?",
+            options: [
+                "54",
+                "56",
+                "64",
+                "48"
+            ],
+            answer: 1
+        },
+
+        {
+            question: "What is 81 ÷ 9?",
+            options: [
+                "7",
+                "8",
+                "9",
+                "10"
+            ],
+            answer: 2
+        },
+
+        {
+            question: "If a car travels 60 km in 1 hour, how far will it travel in 3 hours?",
+            options: [
+                "120 km",
+                "150 km",
+                "180 km",
+                "200 km"
+            ],
+            answer: 2
+        },
+
+        {
+            question: "What is the square of 12?",
+            options: [
+                "124",
+                "144",
+                "154",
+                "164"
+            ],
+            answer: 1
+        },
+
+        {
+            question: "What is the square root of 64?",
+            options: [
+                "6",
+                "7",
+                "8",
+                "9"
+            ],
+            answer: 2
+        },
+
+        {
+            question: "What is 25% of 200?",
+            options: [
+                "25",
+                "40",
+                "50",
+                "75"
+            ],
+            answer: 2
+        },
+
+        {
+            question: "If 5 pens cost ₹50, what is the cost of one pen?",
+            options: [
+                "₹5",
+                "₹10",
+                "₹15",
+                "₹20"
+            ],
+            answer: 1
         },
 
         {
@@ -1315,81 +1290,101 @@ const questionData = {
             options: [
                 "9",
                 "10",
-                "12",
-                "14"
+                "11",
+                "12"
             ],
-            answer: "10"
+            answer: 1
         },
 
         {
             question: "What is the next number: 5, 10, 15, 20, ?",
             options: [
-                "21",
+                "22",
+                "24",
                 "25",
-                "30",
-                "35"
+                "30"
             ],
-            answer: "25"
+            answer: 2
         },
 
         {
-            question: "If 3 workers complete a task in 6 days, how many worker-days are required?",
+            question: "If a = 5 and b = 3, what is a + b?",
+            options: [
+                "6",
+                "7",
+                "8",
+                "9"
+            ],
+            answer: 2
+        },
+
+        {
+            question: "What is the ratio of 2 to 4 in simplest form?",
+            options: [
+                "1:2",
+                "2:1",
+                "1:4",
+                "2:4"
+            ],
+            answer: 0
+        },
+
+        {
+            question: "How many degrees are in a right angle?",
+            options: [
+                "45",
+                "90",
+                "180",
+                "360"
+            ],
+            answer: 1
+        },
+
+        {
+            question: "How many sides does a triangle have?",
+            options: [
+                "2",
+                "3",
+                "4",
+                "5"
+            ],
+            answer: 1
+        },
+
+        {
+            question: "What is 10% of 500?",
+            options: [
+                "25",
+                "40",
+                "50",
+                "60"
+            ],
+            answer: 2
+        },
+
+        {
+            question: "If 3 workers complete a task in 6 days, the task requires how many worker-days?",
             options: [
                 "9",
                 "12",
                 "18",
                 "24"
             ],
-            answer: "18"
-        },
-
-        {
-            question: "What is 75% of 200?",
-            options: [
-                "100",
-                "125",
-                "150",
-                "175"
-            ],
-            answer: "150"
-        },
-
-        {
-            question: "A shirt costs ₹800 and has a ₹200 discount. What is the final price?",
-            options: [
-                "₹500",
-                "₹600",
-                "₹700",
-                "₹900"
-            ],
-            answer: "₹600"
-        },
-
-        {
-            question: "What is the square root of 81?",
-            options: [
-                "7",
-                "8",
-                "9",
-                "10"
-            ],
-            answer: "9"
+            answer: 2
         }
-
     ]
 
 };
 
 
 // ======================================================
-// PRACTICE SETTINGS
+// SETTINGS
 // ======================================================
 
-// Number of questions shown in one practice session.
 const QUESTIONS_PER_SESSION = 5;
 
-// Prefix used for storing attempted questions.
-const ATTEMPTED_KEY_PREFIX = "attemptedPracticeQuestions_";
+const ATTEMPTED_KEY_PREFIX =
+    "attemptedPracticeQuestions_";
 
 
 // ======================================================
@@ -1397,12 +1392,13 @@ const ATTEMPTED_KEY_PREFIX = "attemptedPracticeQuestions_";
 // ======================================================
 
 let currentQuestion = 0;
+
 let score = 0;
+
 let selectedAnswer = false;
 
 let currentCategory = "Frontend";
 
-// Questions selected for the CURRENT session.
 let questions = [];
 
 
@@ -1413,26 +1409,23 @@ let questions = [];
 const questionNumber =
     document.getElementById("question-number");
 
+const scoreText =
+    document.getElementById("score");
+
 const questionText =
     document.getElementById("question");
 
 const optionsContainer =
-    document.querySelector(".options");
-
-const scoreText =
-    document.getElementById("score");
+    document.getElementById("options");
 
 const nextButton =
     document.getElementById("next-btn");
 
 const resultBox =
-    document.getElementById("result-box");
+    document.getElementById("result");
 
 const finalScore =
     document.getElementById("final-score");
-
-const resultMessage =
-    document.getElementById("result-message");
 
 const correctAnswers =
     document.getElementById("correct-answers");
@@ -1440,8 +1433,8 @@ const correctAnswers =
 const wrongAnswers =
     document.getElementById("wrong-answers");
 
-const restartButton =
-    document.getElementById("restart-btn");
+const resultMessage =
+    document.getElementById("result-message");
 
 
 // ======================================================
@@ -1449,21 +1442,26 @@ const restartButton =
 // ======================================================
 
 const categoryButtons =
-    document.querySelectorAll(".practice-category");
+    document.querySelectorAll(".category-btn");
 
 
 categoryButtons.forEach(function (button) {
 
     button.addEventListener("click", function () {
 
-        currentCategory =
-            button.textContent.trim();
-
         categoryButtons.forEach(function (btn) {
+
             btn.classList.remove("active");
+
         });
 
+
         button.classList.add("active");
+
+
+        currentCategory =
+            button.dataset.category;
+
 
         startNewPracticeSession();
 
@@ -1473,57 +1471,37 @@ categoryButtons.forEach(function (button) {
 
 
 // ======================================================
-// GET ATTEMPTED QUESTION INDEXES
+// GET ATTEMPTED QUESTIONS
 // ======================================================
 
 function getAttemptedQuestions(category) {
 
-    const storageKey =
+    const key =
         ATTEMPTED_KEY_PREFIX + category;
 
-    const saved =
-        localStorage.getItem(storageKey);
 
-    if (!saved) {
-        return [];
-    }
-
-    try {
-
-        const parsed =
-            JSON.parse(saved);
-
-        if (Array.isArray(parsed)) {
-            return parsed;
-        }
-
-        return [];
-
-    } catch (error) {
-
-        console.error(
-            "Could not read attempted questions:",
-            error
-        );
-
-        return [];
-
-    }
+    return JSON.parse(
+        localStorage.getItem(key)
+    ) || [];
 
 }
 
 
 // ======================================================
-// SAVE ATTEMPTED QUESTION INDEXES
+// SAVE ATTEMPTED QUESTIONS
 // ======================================================
 
-function saveAttemptedQuestions(category, indexes) {
+function saveAttemptedQuestions(
+    category,
+    indexes
+) {
 
-    const storageKey =
+    const key =
         ATTEMPTED_KEY_PREFIX + category;
 
+
     localStorage.setItem(
-        storageKey,
+        key,
         JSON.stringify(indexes)
     );
 
@@ -1539,81 +1517,64 @@ function getRandomQuestions(category) {
     const allQuestions =
         questionData[category];
 
+
     let attempted =
         getAttemptedQuestions(category);
 
-    // Remove invalid old indexes if the database changes.
-    attempted =
-        attempted.filter(function (index) {
 
-            return (
-                Number.isInteger(index) &&
-                index >= 0 &&
-                index < allQuestions.length
-            );
+    // Create indexes of available questions
+    let availableIndexes =
+        allQuestions
+            .map(function (_, index) {
 
-        });
+                return index;
+
+            })
+            .filter(function (index) {
+
+                return !attempted.includes(index);
+
+            });
 
 
-    // ==================================================
-    // IF ALL QUESTIONS HAVE BEEN ATTEMPTED
-    // START A NEW CYCLE
-    // ==================================================
-
-    if (attempted.length >= allQuestions.length) {
+    // If all questions have been attempted,
+    // start a new cycle
+    if (
+        availableIndexes.length <
+        QUESTIONS_PER_SESSION
+    ) {
 
         attempted = [];
 
         saveAttemptedQuestions(
             category,
-            attempted
+            []
         );
 
-    }
 
+        availableIndexes =
+            allQuestions.map(
+                function (_, index) {
 
-    // ==================================================
-    // FIND QUESTIONS NOT YET ATTEMPTED
-    // ==================================================
+                    return index;
 
-    const availableIndexes =
-        allQuestions
-            .map(function (_, index) {
-                return index;
-            })
-            .filter(function (index) {
-                return !attempted.includes(index);
-            });
-
-
-    // ==================================================
-    // SHUFFLE AVAILABLE QUESTIONS
-    // ==================================================
-
-    for (
-        let i = availableIndexes.length - 1;
-        i > 0;
-        i--
-    ) {
-
-        const randomIndex =
-            Math.floor(
-                Math.random() * (i + 1)
+                }
             );
 
-        const temp =
-            availableIndexes[i];
-
-        availableIndexes[i] =
-            availableIndexes[randomIndex];
-
-        availableIndexes[randomIndex] =
-            temp;
-
     }
 
 
-    // Select 5 or whatever remains in this cycle.
+    // Shuffle available indexes
+    availableIndexes.sort(
+        function () {
+
+            return Math.random() - 0.5;
+
+        }
+    );
+
+
+    // Select questions for this session
     const selectedIndexes =
         availableIndexes.slice(
             0,
@@ -1621,9 +1582,12 @@ function getRandomQuestions(category) {
         );
 
 
-    // Save these questions as attempted.
+    // Save selected questions as attempted
     const updatedAttempted =
-        [...attempted, ...selectedIndexes];
+        attempted.concat(
+            selectedIndexes
+        );
+
 
     saveAttemptedQuestions(
         category,
@@ -1631,12 +1595,13 @@ function getRandomQuestions(category) {
     );
 
 
-    // Return actual question objects.
-    return selectedIndexes.map(function (index) {
+    return selectedIndexes.map(
+        function (index) {
 
-        return allQuestions[index];
+            return allQuestions[index];
 
-    });
+        }
+    );
 
 }
 
@@ -1654,29 +1619,58 @@ function startNewPracticeSession() {
     selectedAnswer = false;
 
 
-    // Get fresh questions.
     questions =
-        getRandomQuestions(currentCategory);
+        getRandomQuestions(
+            currentCategory
+        );
 
 
-    // Make sure the result screen is hidden.
-    resultBox.style.display = "none";
+    if (resultBox) {
+
+        resultBox.style.display =
+            "none";
+
+    }
 
 
-    questionNumber.style.display =
-        "inline";
+    if (questionNumber) {
 
-    scoreText.style.display =
-        "inline";
+        questionNumber.style.display =
+            "block";
 
-    questionText.style.display =
-        "block";
+    }
 
-    optionsContainer.style.display =
-        "flex";
 
-    nextButton.style.display =
-        "inline-block";
+    if (scoreText) {
+
+        scoreText.style.display =
+            "block";
+
+    }
+
+
+    if (questionText) {
+
+        questionText.style.display =
+            "block";
+
+    }
+
+
+    if (optionsContainer) {
+
+        optionsContainer.style.display =
+            "block";
+
+    }
+
+
+    if (nextButton) {
+
+        nextButton.style.display =
+            "block";
+
+    }
 
 
     loadQuestion();
@@ -1697,50 +1691,84 @@ function loadQuestion() {
         questions[currentQuestion];
 
 
+    if (!current) {
+
+        return;
+
+    }
+
+
     questionNumber.textContent =
         `Question ${currentQuestion + 1} of ${questions.length}`;
-
-
-    questionText.textContent =
-        current.question;
 
 
     scoreText.textContent =
         `Score: ${score}`;
 
 
-    optionsContainer.innerHTML = "";
+    questionText.textContent =
+        current.question;
 
 
-    current.options.forEach(function (option) {
-
-        const button =
-            document.createElement("button");
+    optionsContainer.innerHTML =
+        "";
 
 
-        button.classList.add("option");
+    current.options.forEach(
+        function (option, index) {
+
+            const button =
+                document.createElement("button");
 
 
-        button.textContent =
-            option;
+            button.className =
+                "option-btn";
 
 
-        button.addEventListener(
-            "click",
-            function () {
-
-                checkAnswer(
-                    button,
-                    option
-                );
-
-            }
-        );
+            button.textContent =
+                option;
 
 
-        optionsContainer.appendChild(button);
+            button.addEventListener(
+                "click",
+                function () {
 
-    });
+                    checkAnswer(
+                        index,
+                        button
+                    );
+
+                }
+            );
+
+
+            optionsContainer.appendChild(
+                button
+            );
+
+        }
+    );
+
+
+    nextButton.disabled = true;
+
+
+    if (
+        currentQuestion ===
+        questions.length - 1
+    ) {
+
+        nextButton.textContent =
+            "Finish";
+
+    }
+
+    else {
+
+        nextButton.textContent =
+            "Next";
+
+    }
 
 }
 
@@ -1750,69 +1778,68 @@ function loadQuestion() {
 // ======================================================
 
 function checkAnswer(
-    button,
-    selectedOption
+    selectedIndex,
+    selectedButton
 ) {
 
     if (selectedAnswer) {
+
         return;
+
     }
 
 
     selectedAnswer = true;
 
 
-    const correctAnswer =
-        questions[currentQuestion].answer;
+    const current =
+        questions[currentQuestion];
+
+
+    const optionButtons =
+        optionsContainer.querySelectorAll(
+            ".option-btn"
+        );
+
+
+    optionButtons.forEach(
+        function (button, index) {
+
+            button.disabled = true;
+
+
+            if (
+                index === current.answer
+            ) {
+
+                button.classList.add(
+                    "correct"
+                );
+
+            }
+
+        }
+    );
 
 
     if (
-        selectedOption ===
-        correctAnswer
+        selectedIndex ===
+        current.answer
     ) {
 
-        button.style.backgroundColor =
-            "#dcfce7";
-
-        button.style.borderColor =
-            "#16a34a";
-
         score++;
+
+
+        selectedButton.classList.add(
+            "correct"
+        );
 
     }
 
     else {
 
-        button.style.backgroundColor =
-            "#fee2e2";
-
-        button.style.borderColor =
-            "#dc2626";
-
-
-        const allOptions =
-            document.querySelectorAll(
-                ".option"
-            );
-
-
-        allOptions.forEach(
-            function (option) {
-
-                if (
-                    option.textContent ===
-                    correctAnswer
-                ) {
-
-                    option.style.backgroundColor =
-                        "#dcfce7";
-
-                    option.style.borderColor =
-                        "#16a34a";
-
-                }
-
-            }
+        selectedButton.classList.add(
+            "incorrect"
         );
 
     }
@@ -1821,48 +1848,51 @@ function checkAnswer(
     scoreText.textContent =
         `Score: ${score}`;
 
+
+    nextButton.disabled = false;
+
 }
 
 
 // ======================================================
-// NEXT QUESTION
+// NEXT BUTTON
 // ======================================================
 
-nextButton.addEventListener(
-    "click",
-    function () {
+if (nextButton) {
 
-        if (!selectedAnswer) {
+    nextButton.addEventListener(
+        "click",
+        function () {
 
-            alert(
-                "Please select an answer first."
-            );
+            if (!selectedAnswer) {
 
-            return;
+                return;
+
+            }
+
+
+            currentQuestion++;
+
+
+            if (
+                currentQuestion >=
+                questions.length
+            ) {
+
+                showResult();
+
+            }
+
+            else {
+
+                loadQuestion();
+
+            }
 
         }
+    );
 
-
-        currentQuestion++;
-
-
-        if (
-            currentQuestion <
-            questions.length
-        ) {
-
-            loadQuestion();
-
-        }
-
-        else {
-
-            showResult();
-
-        }
-
-    }
-);
+}
 
 
 // ======================================================
@@ -1878,40 +1908,101 @@ function showResult() {
 
 
     // ==================================================
-    // SAVE PRACTICE COMPLETION
+    // GET CURRENT LOGGED-IN USER
     // ==================================================
 
-    let practiceCount =
-        Number(
+    const currentUserId =
+        localStorage.getItem(
+            "currentUserId"
+        );
+
+
+    // ==================================================
+    // GET REGISTERED USERS
+    // ==================================================
+
+    let users =
+        JSON.parse(
             localStorage.getItem(
-                "practiceCount"
+                "registeredUsers"
             )
-        ) || 0;
-
-
-    practiceCount++;
-
-
-    localStorage.setItem(
-        "practiceCount",
-        practiceCount
-    );
+        ) || [];
 
 
     // ==================================================
-    // SAVE LATEST PERFORMANCE
+    // FIND CURRENT USER
     // ==================================================
 
-    localStorage.setItem(
-        "latestScore",
-        percentage
-    );
+    const currentUser =
+        users.find(
+            function (user) {
+
+                return String(user.id) ===
+                    String(currentUserId);
+
+            }
+        );
 
 
-    localStorage.setItem(
-        "lastActivity",
-        "Practice - " + currentCategory
-    );
+    // ==================================================
+    // SAVE PRACTICE DATA TO CURRENT USER
+    // ==================================================
+
+    if (currentUser) {
+
+        // Increase practice completion count
+        currentUser.practiceCount =
+            (Number(
+                currentUser.practiceCount
+            ) || 0) + 1;
+
+
+        // Save latest score
+        currentUser.latestScore =
+            percentage;
+
+
+        // Update best score
+        currentUser.bestScore =
+            Math.max(
+                Number(
+                    currentUser.bestScore
+                ) || 0,
+                percentage
+            );
+
+
+        // Save last activity
+        currentUser.lastActivity =
+            "Practice - " +
+            currentCategory;
+
+
+        // Save updated users
+        localStorage.setItem(
+            "registeredUsers",
+            JSON.stringify(users)
+        );
+
+    }
+
+    else {
+
+        console.warn(
+            "Current user not found. Practice statistics were not saved."
+        );
+
+        console.log(
+            "currentUserId:",
+            currentUserId
+        );
+
+        console.log(
+            "registeredUsers:",
+            users
+        );
+
+    }
 
 
     // ==================================================
@@ -1974,14 +2065,18 @@ function showResult() {
     questionNumber.style.display =
         "none";
 
+
     scoreText.style.display =
         "none";
+
 
     questionText.style.display =
         "none";
 
+
     optionsContainer.style.display =
         "none";
+
 
     nextButton.style.display =
         "none";
@@ -1998,31 +2093,38 @@ function showResult() {
 
 
 // ======================================================
-// PRACTICE AGAIN
+// RESTART PRACTICE
 // ======================================================
 
-restartButton.addEventListener(
-    "click",
-    function () {
+const restartButton =
+    document.getElementById(
+        "restart-btn"
+    );
 
-        /*
-         * IMPORTANT:
-         *
-         * We DO NOT delete the attempted-question
-         * history here.
-         *
-         * Therefore Practice Again will automatically
-         * select questions the user has NOT attempted.
-         */
 
-        startNewPracticeSession();
+if (restartButton) {
 
-    }
-);
+    restartButton.addEventListener(
+        "click",
+        function () {
+
+            startNewPracticeSession();
+
+        }
+    );
+
+}
 
 
 // ======================================================
-// START FIRST PRACTICE SESSION
+// INITIAL START
 // ======================================================
 
-startNewPracticeSession();
+if (
+    document.getElementById("practice-container") ||
+    questionText
+) {
+
+    startNewPracticeSession();
+
+}
