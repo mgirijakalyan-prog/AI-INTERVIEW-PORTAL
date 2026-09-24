@@ -52,13 +52,22 @@
                 <a href="practice.html">Practice</a>
             </li>
 
-            <li><a href="mock-interview.html">Mock Interview</a></li>
-            <li><a href="dashboard.html">Dashboard</a></li>
-            <li><a href="about.html">About</a></li>
+            <li>
+                <a href="mock-interview.html">Mock Interview</a>
+            </li>
+
+            <li>
+                <a href="dashboard.html">Dashboard</a>
+            </li>
+
+            <li>
+                <a href="about.html">About</a>
+            </li>
+
         </ul>
 
 
-        <button class="login-btn" id="login-btn">
+        <button class="login-btn" id="login-btn" type="button">
             Login
         </button>
 
@@ -81,40 +90,60 @@
         </div>
 
 
+
         <!-- Category Selection -->
 
         <div class="practice-categories">
 
-            <button class="practice-category active">
+            <button
+                type="button"
+                class="category-btn active"
+                data-category="Frontend">
                 Frontend
             </button>
 
-            <button class="practice-category">
+            <button
+                type="button"
+                class="category-btn"
+                data-category="JavaScript">
                 JavaScript
             </button>
 
-            <button class="practice-category">
+            <button
+                type="button"
+                class="category-btn"
+                data-category="Programming">
                 Programming
             </button>
 
-            <button class="practice-category">
+            <button
+                type="button"
+                class="category-btn"
+                data-category="Database">
                 Database
             </button>
 
-            <button class="practice-category">
+            <button
+                type="button"
+                class="category-btn"
+                data-category="HR">
                 HR
             </button>
 
-            <button class="practice-category">
+            <button
+                type="button"
+                class="category-btn"
+                data-category="Aptitude">
                 Aptitude
             </button>
 
         </div>
 
 
+
         <!-- Question Box -->
 
-        <div class="question-container">
+        <div class="question-container" id="practice-container">
 
             <div class="question-top">
 
@@ -129,52 +158,57 @@
             </div>
 
 
+
             <h2 id="question">
-                What does HTML stand for?
+                Loading question...
             </h2>
+
 
 
             <!-- Options -->
 
-            <div class="options">
+            <div id="options" class="options">
 
-                <button class="option">
-                    Hyper Text Markup Language
-                </button>
-
-                <button class="option">
-                    High Text Machine Language
-                </button>
-
-                <button class="option">
-                    Hyperlink Text Management Language
-                </button>
-
-                <button class="option">
-                    Home Tool Markup Language
-                </button>
+                <!-- JavaScript will create options here -->
 
             </div>
 
 
-            <button id="next-btn">
-                Next Question
+
+            <!-- Next Button -->
+
+            <button
+                id="next-btn"
+                type="button"
+                disabled>
+                Next
             </button>
+
 
 
             <!-- Result Box -->
 
-            <div id="result-box" class="result-box">
+            <div
+                id="result"
+                class="result-box"
+                style="display: none;">
 
-                <h2>Interview Complete!</h2>
+                <h2>
+                    Interview Complete!
+                </h2>
 
-                <div class="result-score" id="final-score">
+
+                <div
+                    class="result-score"
+                    id="final-score">
                     0%
                 </div>
+
 
                 <p id="result-message">
                     Great job!
                 </p>
+
 
 
                 <div class="result-details">
@@ -192,9 +226,12 @@
                 </div>
 
 
+
                 <div class="result-buttons">
 
-                    <button id="restart-btn">
+                    <button
+                        id="restart-btn"
+                        type="button">
                         Practice Again
                     </button>
 
@@ -212,7 +249,7 @@
 
 
 
-    <!-- Existing JavaScript -->
+    <!-- Practice JavaScript -->
 
     <script src="../script.js"></script>
 
@@ -236,7 +273,11 @@
 
                 localStorage.removeItem("loggedIn");
 
+                localStorage.removeItem("currentUserId");
+
                 localStorage.removeItem("userEmail");
+
+                localStorage.removeItem("userName");
 
                 window.location.href = "../index.html";
 
