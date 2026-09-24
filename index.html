@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -193,7 +192,9 @@
 
                 <p>HTML, CSS, JavaScript</p>
 
-                <button>Start Practice</button>
+                <button onclick="startCategoryPractice('Frontend')">
+                    Start Practice
+                </button>
 
             </div>
 
@@ -206,7 +207,9 @@
 
                 <p>APIs, Databases, Servers</p>
 
-                <button>Start Practice</button>
+                <button onclick="startCategoryPractice('Backend')">
+                    Start Practice
+                </button>
 
             </div>
 
@@ -219,7 +222,9 @@
 
                 <p>C, C++, Java, Python</p>
 
-                <button>Start Practice</button>
+                <button onclick="startCategoryPractice('Programming')">
+                    Start Practice
+                </button>
 
             </div>
 
@@ -232,7 +237,9 @@
 
                 <p>Communication & HR Questions</p>
 
-                <button>Start Practice</button>
+                <button onclick="startCategoryPractice('HR')">
+                    Start Practice
+                </button>
 
             </div>
 
@@ -245,7 +252,9 @@
 
                 <p>Quantitative & Logical Reasoning</p>
 
-                <button>Start Practice</button>
+                <button onclick="startCategoryPractice('Aptitude')">
+                    Start Practice
+                </button>
 
             </div>
 
@@ -258,7 +267,9 @@
 
                 <p>SQL, DBMS & Queries</p>
 
-                <button>Start Practice</button>
+                <button onclick="startCategoryPractice('Database')">
+                    Start Practice
+                </button>
 
             </div>
 
@@ -449,7 +460,17 @@
 
     </footer>
 
+    <script>
 
+        function startCategoryPractice(category) {
+
+            window.location.href =
+                "pages/practice.html?category=" +
+                encodeURIComponent(category);
+
+        }
+
+    </script>
     <!-- Main JavaScript -->
     <script src="script.js"></script>
 
@@ -495,4 +516,3 @@
 </body>
 
 </html>
-
